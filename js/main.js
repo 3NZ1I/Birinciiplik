@@ -3,30 +3,14 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-    
+
     // ========================================
     // Language Switcher
     // ========================================
-    let currentLang = localStorage.getItem('preferredLang') || 'en';
-    applyLanguage(currentLang);
-    
     const langBtns = document.querySelectorAll('.lang-btn');
     
-    langBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const lang = this.getAttribute('data-lang');
-            
-            // Update active state
-            langBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Store language preference
-            localStorage.setItem('preferredLang', lang);
-            
-            // Apply language
-            applyLanguage(lang);
-        });
-    });
+    // Get saved language or default to English
+    let currentLang = localStorage.getItem('preferredLang') || 'en';
     
     function applyLanguage(lang) {
         currentLang = lang;
@@ -43,33 +27,49 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Update all translatable elements
-        document.querySelectorAll('[data-i18n]').forEach(element => {
-            const key = element.getAttribute('data-i18n');
-            if (translations[lang] && translations[lang][key]) {
-                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                    element.placeholder = translations[lang][key];
-                } else {
-                    element.innerHTML = translations[lang][key];
-                }
-            }
-        });
-        
-        // Update select options
-        document.querySelectorAll('select[data-i18n-option]').forEach(select => {
-            const options = select.querySelectorAll('option');
-            options.forEach(option => {
-                const key = option.getAttribute('data-i18n-option');
+        if (typeof translations !== 'undefined') {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
                 if (translations[lang] && translations[lang][key]) {
-                    option.textContent = translations[lang][key];
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = translations[lang][key];
+                    } else {
+                        element.innerHTML = translations[lang][key];
+                    }
                 }
             });
-        });
+            
+            // Update select options
+            document.querySelectorAll('select[data-i18n-option]').forEach(select => {
+                const options = select.querySelectorAll('option');
+                options.forEach(option => {
+                    const key = option.getAttribute('data-i18n-option');
+                    if (translations[lang] && translations[lang][key]) {
+                        option.textContent = translations[lang][key];
+                    }
+                });
+            });
+        }
         
         // Update language buttons active state
         langBtns.forEach(b => {
             b.classList.toggle('active', b.getAttribute('data-lang') === lang);
         });
+        
+        // Save to localStorage
+        localStorage.setItem('preferredLang', lang);
     }
+    
+    // Apply language on page load
+    applyLanguage(currentLang);
+    
+    // Add click handlers to language buttons
+    langBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const lang = this.getAttribute('data-lang');
+            applyLanguage(lang);
+        });
+    });
     
     // ========================================
     // Mobile Navigation Toggle
