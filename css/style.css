@@ -1156,6 +1156,19 @@ ul {
     background-color: var(--bg-light);
 }
 
+.map-link {
+    display: block;
+    transition: var(--transition);
+}
+
+.map-link:hover {
+    transform: scale(1.02);
+}
+
+.map-link:hover .map-placeholder {
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
 .map-placeholder {
     background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
     border-radius: 10px;
