@@ -18,10 +18,21 @@ Before deploying to GitHub Pages, make sure to:
 
 ## 🚀 Deploy to GitHub Pages
 
-### Step 1: Create GitHub Account
+### Step 1: Update Contact Information
+
+Before deploying, update the contact details in all HTML files:
+
+- **Email:** `sales@birinciiplik.com`
+- **Phone:** `+90 533 627 47 61`
+- **Address:** Add your specific address in Gaziantep
+
+The contact information has already been updated in the templates. Just verify and add your exact factory/office address.
+
+### Step 2: Create GitHub Account
+
 If you don't have one, visit https://github.com and create a free account.
 
-### Step 2: Create a New Repository
+### Step 3: Create a New Repository
 
 1. Go to https://github.com/new
 2. Repository name: `birinci-iplik-website`
@@ -30,7 +41,7 @@ If you don't have one, visit https://github.com and create a free account.
 5. **Do NOT** initialize with README (we already have one)
 6. Click "Create repository"
 
-### Step 3: Push Your Code
+### Step 4: Push Your Code
 
 Run these commands in your terminal:
 
@@ -60,7 +71,7 @@ git remote add origin https://github.com/YOUR_USERNAME/birinci-iplik-website.git
 git push -u origin main
 ```
 
-### Step 4: Enable GitHub Pages
+### Step 5: Enable GitHub Pages
 
 1. Go to your repository on GitHub
 2. Click on **Settings** (top menu)
@@ -71,7 +82,7 @@ git push -u origin main
    - Folder: **/ (root)**
 5. Click **Save**
 
-### Step 5: Access Your Website
+### Step 6: Access Your Website
 
 After 1-2 minutes, your website will be live at:
 ```

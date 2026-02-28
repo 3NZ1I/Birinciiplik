@@ -76,8 +76,8 @@ gh api -X POST /repos/{username}/birinci-iplik-website/pages \
 Edit the following files with actual contact details:
 
 - **index.html**, **contact.html**, **about.html**, **products.html** - Update:
-  - Phone numbers: `+90 342 000 00 00`
-  - Email: `info@birinciiplik.com`
+  - Phone numbers: `+90 533 627 47 61`
+  - Email: `sales@birinciiplik.com`
   - Address: Add your actual address in Gaziantep
 
 ### Add Images
