@@ -149,8 +149,10 @@ ul {
     color: var(--primary-color);
 }
 
-.logo-icon {
-    font-size: 2rem;
+.logo-image {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
 }
 
 .logo-text strong {
