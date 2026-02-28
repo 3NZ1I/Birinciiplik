@@ -1268,3 +1268,83 @@ ul {
         grid-template-columns: 1fr;
     }
 }
+
+/* ========================================
+   RTL (Right-to-Left) Support for Arabic
+   ======================================== */
+
+html[dir="rtl"],
+body.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] .nav-menu {
+    gap: 30px;
+}
+
+html[dir="rtl"] .logo {
+    flex-direction: row;
+}
+
+html[dir="rtl"] .lang-switch {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .hero-buttons {
+    flex-direction: row;
+}
+
+html[dir="rtl"] .about-list li::before {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+html[dir="rtl"] .feature-list li::before {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+html[dir="rtl"] .product-detail-grid.reverse {
+    direction: rtl;
+}
+
+html[dir="rtl"] .cta-buttons {
+    flex-direction: row;
+}
+
+html[dir="rtl"] .footer-grid {
+    direction: rtl;
+}
+
+html[dir="rtl"] .contact-info li {
+    flex-direction: row;
+}
+
+html[dir="rtl"] .business-hours ul li {
+    flex-direction: row;
+}
+
+html[dir="rtl"] .social-links {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .nav-toggle {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+html[dir="rtl"] .hero-title br {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    html[dir="rtl"] .nav-menu {
+        flex-direction: column;
+    }
+    
+    html[dir="rtl"] .hero-buttons,
+    html[dir="rtl"] .cta-buttons {
+        flex-direction: column;
+    }
+}
