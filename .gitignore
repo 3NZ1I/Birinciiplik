@@ -1,0 +1,7 @@
+# Ignore Node modules and common IDE files
+node_modules/
+.vscode/
+.idea/
+*.log
+.DS_Store
+Thumbs.db
