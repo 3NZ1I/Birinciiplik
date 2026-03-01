@@ -951,6 +951,24 @@ html[dir="rtl"] .navbar .quote-btn {
     color: var(--bg-white);
 }
 
+/* About Page Header with Background Image */
+.page-header.about-header {
+    background: linear-gradient(135deg, rgba(26, 54, 93, 0.85) 0%, rgba(44, 82, 130, 0.8) 100%), url('../images/background-for-about.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Contact Page Header with Background Image */
+.page-header.contact-header {
+    background: linear-gradient(135deg, rgba(26, 54, 93, 0.85) 0%, rgba(44, 82, 130, 0.8) 100%), url('../images/background-for-contact.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 /* Products Page Header with Background Image */
 .page-header.products-header {
     background: linear-gradient(135deg, rgba(26, 54, 93, 0.85) 0%, rgba(44, 82, 130, 0.8) 100%), url('../images/header-for-products.png');
