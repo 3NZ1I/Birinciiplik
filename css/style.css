@@ -832,6 +832,9 @@ html[dir="rtl"] .navbar .quote-btn {
     text-align: center;
     border: 2px solid var(--border-color);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .cert-card:hover {
@@ -843,17 +846,29 @@ html[dir="rtl"] .navbar .quote-btn {
 .cert-icon {
     font-size: 3.5rem;
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    width: 100%;
+}
+
+.cert-icon img {
+    display: block;
+    margin: 0 auto;
 }
 
 .cert-card h3 {
     font-size: 1.3rem;
     margin-bottom: 10px;
     color: var(--primary-color);
+    text-align: center;
 }
 
 .cert-card p {
     color: var(--text-light);
     font-size: 0.95rem;
+    text-align: center;
 }
 
 /* Newsletter Form */
