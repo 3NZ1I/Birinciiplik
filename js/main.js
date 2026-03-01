@@ -151,99 +151,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Contact Form Handler (Formspree)
     // ========================================
     const contactForm = document.getElementById('contactForm');
-    
+
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             // Formspree handles the submission
             // You can add custom validation here if needed
         });
     }
-    
-    // ========================================
-    // Scrolling Animation - Knitting & Cat
-    // ========================================
-    const threadLine = document.getElementById('threadLine');
-    const yarnBall = document.getElementById('yarnBall');
-    const catContainer = document.getElementById('catContainer');
-    const catMessage = document.getElementById('catMessage');
-    
-    if (threadLine && yarnBall && catContainer) {
-        let catReached = false;
-        
-        // Fixed positions
-        const startY = 160; // Where thread starts (bottom of needles)
-        const minBallY = startY + 30; // Minimum thread length
-        const maxBallY = window.innerHeight - 180; // Max before cat
-        
-        window.addEventListener('scroll', function() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrollPercent = Math.min(scrollTop / docHeight, 1);
-            
-            // Calculate thread length (within bounds)
-            const availableLength = maxBallY - minBallY;
-            const threadLength = Math.min(scrollPercent * availableLength, availableLength);
-            const currentBallY = minBallY + threadLength;
-            
-            // Update thread line height
-            threadLine.style.height = threadLength + 'px';
-            
-            // Update yarn ball position
-            yarnBall.style.top = currentBallY + 'px';
-            
-            // Show cat when scrolling near bottom (70% down) - cat stays fixed
-            if (scrollPercent > 0.70 && !catContainer.classList.contains('visible')) {
-                catContainer.classList.add('visible');
-            }
-            
-            // Cat catches ball at 90% scroll
-            if (scrollPercent > 0.90 && !catReached) {
-                catReached = true;
-                
-                // Move ball to cat (cat is fixed at bottom: 100px, left: 35px, scaled 0.65)
-                yarnBall.style.transition = 'all 0.4s ease';
-                yarnBall.style.top = (window.innerHeight - 145) + 'px';
-                yarnBall.style.left = '65px';
-                
-                // Adjust thread to follow ball
-                threadLine.style.transition = 'height 0.4s ease';
-                threadLine.style.height = (window.innerHeight - 305) + 'px';
-                
-                // Show cat message
-                setTimeout(() => {
-                    catMessage.classList.add('visible');
-                    
-                    // Cat plays with ball animation
-                    yarnBall.style.animation = 'catPlay 0.5s ease-in-out infinite alternate';
-                }, 400);
-            }
-            
-            // Reset when scrolling back up
-            if (scrollPercent < 0.80 && catReached) {
-                catReached = false;
-                yarnBall.style.transition = 'top 0.05s ease, left 0.3s ease';
-                yarnBall.style.left = '40px';
-                yarnBall.style.animation = '';
-                catMessage.classList.remove('visible');
-                catContainer.classList.remove('visible');
-            }
-        });
-    }
-    
-    // Add cat play animation dynamically
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes catPlay {
-            0% {
-                transform: translateX(-50%) rotate(-10deg);
-            }
-            100% {
-                transform: translateX(-50%) rotate(10deg);
-            }
-        }
-    `;
-    document.head.appendChild(style);
-    
+
     // ========================================
     // Notification System
     // ========================================
