@@ -890,7 +890,10 @@ html[dir="rtl"] .navbar .quote-btn {
 
 /* Page Header */
 .page-header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+    background: linear-gradient(135deg, rgba(26, 54, 93, 0.9) 0%, rgba(44, 82, 130, 0.85) 100%), url('../images/header-for-products.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 150px 0 80px;
     text-align: center;
     color: var(--bg-white);
