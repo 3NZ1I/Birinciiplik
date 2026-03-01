@@ -1011,6 +1011,9 @@ html[dir="rtl"] .navbar .quote-btn {
     text-align: center;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .quality-card:hover {
@@ -1025,6 +1028,7 @@ html[dir="rtl"] .navbar .quote-btn {
     align-items: center;
     justify-content: center;
     min-height: 80px;
+    width: 100%;
 }
 
 .quality-icon img {
@@ -1035,10 +1039,12 @@ html[dir="rtl"] .navbar .quote-btn {
 .quality-card h3 {
     font-size: 1.2rem;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .quality-card p {
     color: var(--text-light);
+    text-align: center;
 }
 
 /* About Main Section */
