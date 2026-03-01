@@ -57,6 +57,26 @@ const translations = {
         'stats-countries': 'Countries Served',
         'stats-clients': 'Happy Clients',
         'stats-quality': 'Quality Guarantee',
+        'stats-capacity': 'Tons Monthly Capacity',
+        'stats-employees': 'Expert Employees',
+        
+        // Certifications
+        'certifications-title': 'Our Certifications',
+        'certifications-subtitle': 'Internationally recognized quality and sustainability standards',
+        'cert-iso9001': 'Quality Management System',
+        'cert-oeko': 'Eco-Tex Standard Certified',
+        'cert-iso14001': 'Environmental Management',
+        'cert-ce': 'European Conformity Certified',
+        'cert-download': 'Download Certificates',
+        
+        // Newsletter
+        'footer-newsletter': 'Newsletter',
+        'newsletter-desc': 'Subscribe to get latest updates and offers',
+        'newsletter-placeholder': 'Your email address',
+        'newsletter-btn': 'Subscribe',
+        
+        // Navigation Quote Button
+        'nav-quote': 'Get a Quote',
         
         // Contact CTA
         'cta-title': 'Ready to Start Your Order?',
@@ -288,6 +308,26 @@ const translations = {
         'stats-countries': 'Hizmet Verilen Ülke',
         'stats-clients': 'Mutlu Müşteri',
         'stats-quality': 'Kalite Garantisi',
+        'stats-capacity': 'Ton Aylık Kapasite',
+        'stats-employees': 'Uzman Çalışan',
+        
+        // Certifications
+        'certifications-title': 'Sertifikalarımız',
+        'certifications-subtitle': 'Uluslararası kabul görmüş kalite ve sürdürülebilirlik standartları',
+        'cert-iso9001': 'Kalite Yönetim Sistemi',
+        'cert-oeko': 'Eco-Tex Standart Sertifikalı',
+        'cert-iso14001': 'Çevresel Yönetim',
+        'cert-ce': 'Avrupa Uyumluluk Sertifikalı',
+        'cert-download': 'Sertifikaları İndir',
+        
+        // Newsletter
+        'footer-newsletter': 'Bülten',
+        'newsletter-desc': 'En son güncellemeleri ve teklifleri almak için abone olun',
+        'newsletter-placeholder': 'E-posta adresiniz',
+        'newsletter-btn': 'Abone Ol',
+        
+        // Navigation Quote Button
+        'nav-quote': 'Teklif Al',
         
         // Contact CTA
         'cta-title': 'Sipariş Vermeye Hazır mısınız?',
@@ -519,6 +559,26 @@ const translations = {
         'stats-countries': 'دولة نخدمها',
         'stats-clients': 'عميل سعيد',
         'stats-quality': 'ضمان الجودة',
+        'stats-capacity': 'طن طاقة شهرية',
+        'stats-employees': 'موظف خبير',
+        
+        // Certifications
+        'certifications-title': 'شهاداتنا',
+        'certifications-subtitle': 'معايير الجودة والاستدامة المعترف بها دوليًا',
+        'cert-iso9001': 'نظام إدارة الجودة',
+        'cert-oeko': 'معتمد من Eco-Tex',
+        'cert-iso14001': 'الإدارة البيئية',
+        'cert-ce': 'معتمد من المطابقة الأوروبية',
+        'cert-download': 'تحميل الشهادات',
+        
+        // Newsletter
+        'footer-newsletter': 'النشرة الإخبارية',
+        'newsletter-desc': 'اشترك للحصول على آخر التحديثات والعروض',
+        'newsletter-placeholder': 'عنوان بريدك الإلكتروني',
+        'newsletter-btn': 'اشترك',
+        
+        // Navigation Quote Button
+        'nav-quote': 'احصل على عرض سعر',
         
         // Contact CTA
         'cta-title': 'هل أنت مستعد لبدء طلبك؟',

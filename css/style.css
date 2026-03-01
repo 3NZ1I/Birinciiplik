@@ -525,7 +525,7 @@ ul {
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 40px;
     text-align: center;
 }
@@ -767,6 +767,126 @@ ul {
 /* ========================================
    Inner Pages Styles
    ======================================== */
+
+/* Quote Button in Navigation */
+.navbar .quote-btn {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: var(--secondary-color);
+    color: var(--bg-white);
+    border-radius: 5px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.navbar .quote-btn:hover {
+    background-color: var(--secondary-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+html[dir="rtl"] .navbar .quote-btn {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+@media (max-width: 992px) {
+    .navbar .quote-btn {
+        margin: 10px 0 0 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    html[dir="rtl"] .navbar .quote-btn {
+        margin: 10px 0 0 0;
+    }
+}
+
+/* Certifications Section */
+.certifications {
+    padding: 100px 0;
+    background-color: var(--bg-white);
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.cert-card {
+    background: var(--bg-light);
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.cert-card:hover {
+    border-color: var(--secondary-color);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.cert-icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.cert-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.cert-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* Newsletter Form */
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.newsletter-form input {
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 0.95rem;
+    font-family: 'Chillax', sans-serif;
+    transition: var(--transition);
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(197, 160, 101, 0.1);
+}
+
+.newsletter-form .btn {
+    width: 100%;
+    padding: 12px 20px;
+}
+
+@media (min-width: 768px) {
+    .newsletter-form {
+        flex-direction: row;
+    }
+    
+    .newsletter-form input {
+        flex: 1;
+    }
+    
+    .newsletter-form .btn {
+        width: auto;
+    }
+}
 
 /* Page Header */
 .page-header {
