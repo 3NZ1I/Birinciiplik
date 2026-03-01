@@ -24,15 +24,16 @@
                     <span></span>
                 </button>
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="products.html" class="nav-link">Products</a></li>
-                    <li><a href="about.html" class="nav-link">About Us</a></li>
-                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    <li><a href="index.html" class="nav-link" data-i18n="nav-home">Home</a></li>
+                    <li><a href="products.html" class="nav-link" data-i18n="nav-products">Products</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav-about">About Us</a></li>
+                    <li><a href="contact.html" class="nav-link active" data-i18n="nav-contact">Contact</a></li>
                     <li class="lang-switch">
                         <button class="lang-btn active" data-lang="en">EN</button>
                         <button class="lang-btn" data-lang="tr">TR</button>
                         <button class="lang-btn" data-lang="ar">عربي</button>
                     </li>
+                    <li><a href="contact.html" class="btn btn-primary quote-btn" data-i18n="nav-quote">Get a Quote</a></li>
                 </ul>
             </div>
         </div>
@@ -218,16 +219,16 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Quick Links</h4>
+                    <h4 data-i18n="footer-links-title">Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" data-i18n="nav-home">Home</a></li>
+                        <li><a href="products.html" data-i18n="nav-products">Products</a></li>
+                        <li><a href="about.html" data-i18n="nav-about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Products</h4>
+                    <h4 data-i18n="footer-products-title">Products</h4>
                     <ul>
                         <li><a href="products.html#fabric">Fabric Threads</a></li>
                         <li><a href="products.html#carpet">Carpet Threads</a></li>
@@ -235,7 +236,15 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact Info</h4>
+                    <h4 data-i18n="footer-newsletter">Newsletter</h4>
+                    <p data-i18n="newsletter-desc">Subscribe to get latest updates and offers</p>
+                    <form class="newsletter-form">
+                        <input type="email" data-i18n="newsletter-placeholder" placeholder="Your email address">
+                        <button type="submit" class="btn btn-primary" data-i18n="newsletter-btn">Subscribe</button>
+                    </form>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer-contact-title">Contact Info</h4>
                     <ul class="contact-info">
                         <li>📍 BİRİNCİ İPLİK SAN.TİC.<br>3. Organize San. Böl., Gaziantep</li>
                         <li>📧 sales@birinciiplik.com</li>
@@ -244,7 +253,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Birinci İplik. All rights reserved.</p>
+                <p data-i18n="footer-copyright">&copy; 2026 Birinci İplik. All rights reserved.</p>
             </div>
         </div>
     </footer>
