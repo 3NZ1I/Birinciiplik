@@ -1280,16 +1280,22 @@ body.rtl {
     text-align: right;
 }
 
+/* Navbar RTL - Keep layout stable */
+html[dir="rtl"] .nav-wrapper {
+    direction: rtl;
+}
+
 html[dir="rtl"] .nav-menu {
     gap: 30px;
+    direction: rtl;
 }
 
 html[dir="rtl"] .logo {
-    flex-direction: row;
+    direction: rtl;
 }
 
 html[dir="rtl"] .lang-switch {
-    flex-direction: row-reverse;
+    direction: rtl;
 }
 
 html[dir="rtl"] .hero-buttons {
