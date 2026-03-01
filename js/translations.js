@@ -1,5 +1,6 @@
 /**
  * Birinci İplik - Language Translations
+ * Complete translations for English, Turkish, and Arabic
  */
 
 const translations = {
@@ -28,6 +29,7 @@ const translations = {
         'feature-partner-desc': 'Years of expertise and commitment to customer satisfaction in every thread.',
         
         // About Preview
+        'about-facility': 'Our Facility in Gaziantep',
         'about-title': 'About Birinci İplik',
         'about-lead': 'Located in Gaziantep, Turkey – the historic center of textile excellence – Birinci İplik has been at the forefront of thread manufacturing and export.',
         'about-desc': 'We specialize in producing high-quality threads for fabrics and carpets, serving textile manufacturers around the world. Our commitment to quality, innovation, and customer satisfaction has made us a trusted partner in the global textile industry.',
@@ -141,6 +143,7 @@ const translations = {
         'about-story-desc2': 'Today, we export our products to over 50 countries across Europe, Asia, Africa, and the Americas, building long-lasting partnerships with fabric and carpet manufacturers who value quality, reliability, and innovation.',
         'about-location-title': 'Our Location',
         'about-location-desc': 'Gaziantep is not just our home – it\'s the heart of Turkey\'s textile industry. With its strategic location, skilled workforce, and deep-rooted textile traditions, Gaziantep provides the perfect foundation for our operations.',
+        'about-facility-img': 'Our Manufacturing Facility',
         
         // Mission & Vision
         'mission-title': 'Our Mission',
@@ -257,6 +260,7 @@ const translations = {
         'feature-partner-desc': 'Her iplikte uzmanlık ve müşteri memnuniyetine bağlılık.',
         
         // About Preview
+        'about-facility': 'Gaziantep\'teki Tesisimiz',
         'about-title': 'Birinci İplik Hakkında',
         'about-lead': 'Türkiye\'nin Gaziantep şehrinde – tekstil mükemmelliğinin tarihi merkezi – Birinci İplik, iplik üretimi ve ihracatında öncü konumdadır.',
         'about-desc': 'Kumaş ve halı iplikleri üretimi konusunda uzmanlaşmış, dünya çapında tekstil üreticilerine hizmet veriyoruz. Kalite, inovasyon ve müşteri memnuniyetine olan bağlılığımız, bizi küresel tekstil endüstrisinde güvenilir bir ortak haline getirdi.',
@@ -370,6 +374,7 @@ const translations = {
         'about-story-desc2': 'Bugün, ürünlerimizi Avrupa, Asya, Afrika ve Amerika\'da 50\'den fazla ülkeye ihraç ediyor ve kalite, güvenilirlik ve inovasyona değer veren kumaş ve halı üreticileriyle uzun ömürlü ortaklıklar kuruyoruz.',
         'about-location-title': 'Konumumuz',
         'about-location-desc': 'Gaziantep sadece evimiz değil – aynı zamanda Türkiye\'nin tekstil endüstrisinin kalbidir. Stratejik konumu, nitelikli işgücü ve köklü tekstil gelenekleri ile Gaziantep, operasyonlarımız için mükemmel bir temel sağlar.',
+        'about-facility-img': 'Üretim Tesisimiz',
         
         // Mission & Vision
         'mission-title': 'Misyonumuz',
@@ -486,6 +491,7 @@ const translations = {
         'feature-partner-desc': 'سنوات من الخبرة والالتزام برضا العملاء في كل خيط.',
         
         // About Preview
+        'about-facility': 'مرفقنا في غازي عنتاب',
         'about-title': 'عن بيرينجي إيبليك',
         'about-lead': 'تقع في غازي عنتاب، تركيا - المركز التاريخي للتميز النسيجي - كانت بيرينجي إيبليك في طليعة تصنيع وتصدير الخيوط.',
         'about-desc': 'نتخصص في إنتاج خيوط عالية الجودة للأقمشة والسجاد، ونخدم مصنعي النسيج حول العالم. إن التزامنا بالجودة والابتكار ورضا العملاء جعلنا شريكًا موثوقًا به في صناعة النسيج العالمية.',
@@ -599,6 +605,7 @@ const translations = {
         'about-story-desc2': 'اليوم، نصدر منتجاتنا إلى أكثر من 50 دولة في جميع أنحاء أوروبا وآسيا وأفريقيا والأمريكتين، نبني شراكات طويلة الأمد مع مصنعي الأقمشة والسجاد الذين يقدرون الجودة والموثوقية والابتكار.',
         'about-location-title': 'موقعنا',
         'about-location-desc': 'غازي عنتاب ليست مجرد موطننا - إنها قلب صناعة النسيج في تركيا. مع موقعها الاستراتيجي والقوى العاملة الماهرة والتقاليد النسيجية العميقة الجذور، توفر غازي عنتاب الأساس المثالي لعملياتنا.',
+        'about-facility-img': 'مرفق التصنيع لدينا',
         
         // Mission & Vision
         'mission-title': 'مهمتنا',
