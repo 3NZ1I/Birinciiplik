@@ -920,10 +920,10 @@ html[dir="rtl"] .navbar .quote-btn {
     overflow: hidden;
 }
 
-/* Knitting Needles - FIXED at Features section start */
+/* Knitting Needles - FIXED position */
 .knitting-needles {
     position: fixed;
-    top: 50vh; /* Middle of viewport - will align with features section */
+    top: 100px;
     left: 40px;
     width: 80px;
     height: 80px;
@@ -997,7 +997,7 @@ html[dir="rtl"] .navbar .quote-btn {
 /* Thread Line - FIXED, only height changes */
 .thread-line {
     position: fixed;
-    top: 580px; /* Below needles - will be updated by JS */
+    top: 180px;
     left: 40px;
     transform: translateX(-50%);
     width: 3px;
@@ -1023,7 +1023,7 @@ html[dir="rtl"] .navbar .quote-btn {
 /* Yarn Ball - Smaller, More Realistic */
 .yarn-ball {
     position: fixed;
-    top: 580px; /* Aligned with thread - will be updated by JS */
+    top: 180px;
     left: 40px;
     transform: translateX(-50%);
     width: 45px;

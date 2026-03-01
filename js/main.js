@@ -170,39 +170,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (threadLine && yarnBall && catContainer) {
         let catReached = false;
         
-        // Get section positions dynamically
-        const featuresSection = document.querySelector('.features');
-        const contactCtaSection = document.querySelector('.contact-cta');
-        
-        function updateAnimationPositions() {
-            if (featuresSection) {
-                const featuresTop = featuresSection.offsetTop;
-                const needlesY = featuresTop - 80; // 80px above features section
-                
-                // Update needles position
-                document.querySelector('.knitting-needles').style.top = needlesY + 'px';
-                
-                // Update thread start position (below needles)
-                const threadStartY = needlesY + 80;
-                threadLine.style.top = threadStartY + 'px';
-                yarnBall.style.top = threadStartY + 'px';
-            }
-            
-            if (contactCtaSection) {
-                const contactCtaBottom = contactCtaSection.offsetTop + contactCtaSection.offsetHeight;
-                // Cat position at end of contact-cta
-                const catY = window.innerHeight - contactCtaBottom + 50;
-                catContainer.style.bottom = '250px';
-            }
-        }
-        
-        // Initial position update
-        setTimeout(updateAnimationPositions, 100);
-        
-        // Fixed positions after calculation
-        const startY = 580; // Will be updated by updateAnimationPositions
-        const minBallY = startY + 30;
-        const maxBallY = window.innerHeight - 280; // Before cat
+        // Fixed positions
+        const startY = 180; // Where thread starts
+        const minBallY = startY + 30; // Minimum thread length
+        const maxBallY = window.innerHeight - 280; // Max before cat
         
         window.addEventListener('scroll', function() {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -257,9 +228,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 catContainer.classList.remove('visible');
             }
         });
-        
-        // Update positions on resize
-        window.addEventListener('resize', updateAnimationPositions);
     }
     
     // Add cat play animation dynamically
