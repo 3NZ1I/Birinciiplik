@@ -160,6 +160,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ========================================
+    // Sewing Machine Animation (Index Page Only)
+    // ========================================
+    const threadLine = document.querySelector('.thread-line');
+    
+    if (threadLine) {
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = Math.min(scrollTop / docHeight, 1);
+            
+            // Thread grows as you scroll down (max 150px)
+            const threadLength = scrollPercent * 150;
+            threadLine.style.height = threadLength + 'px';
+        });
+    }
+
+    // ========================================
     // Notification System
     // ========================================
     function showNotification(message, type = 'info') {
