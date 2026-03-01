@@ -366,6 +366,15 @@ ul {
 .feature-icon {
     font-size: 3rem;
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+}
+
+.feature-icon img {
+    display: block;
+    margin: 0 auto;
 }
 
 .feature-card h3 {
