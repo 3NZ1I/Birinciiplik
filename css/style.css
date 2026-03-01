@@ -653,14 +653,15 @@ ul {
     transition: var(--transition);
 }
 
-.social-icon:hover {
-    color: var(--secondary-color);
-    transform: scale(1.1);
-}
-
 .social-icon svg {
     width: 24px;
     height: 24px;
+    fill: currentColor;
+}
+
+.social-icon:hover {
+    color: var(--secondary-color);
+    transform: scale(1.1);
 }
 
 .social-links.large .social-icon {
@@ -1317,6 +1318,13 @@ html[dir="rtl"] .navbar .quote-btn {
 .map-section {
     padding: 100px 0;
     background-color: var(--bg-light);
+}
+
+.map-container {
+    margin-top: 40px;
+    box-shadow: var(--shadow-lg);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .map-link {
