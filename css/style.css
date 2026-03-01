@@ -620,7 +620,10 @@ ul {
    Footer
    ======================================== */
 .footer {
-    background-color: var(--primary-color);
+    background: linear-gradient(rgba(26, 54, 93, 0.9), rgba(26, 54, 93, 0.95)), url('../images/footer-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: var(--bg-white);
     padding: 60px 0 30px;
 }
@@ -688,14 +691,14 @@ ul {
     justify-content: center;
     width: 36px;
     height: 36px;
-    color: var(--primary-color) !important;
+    color: #ffffff !important;
     transition: var(--transition);
 }
 
 .social-icon svg {
     width: 24px;
     height: 24px;
-    fill: currentColor !important;
+    fill: #ffffff !important;
 }
 
 .social-icon:hover {
