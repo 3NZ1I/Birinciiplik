@@ -20,6 +20,15 @@
     --transition: all 0.3s ease;
 }
 
+/* Arabic Font - KAF AREF RUQAA */
+@font-face {
+    font-family: 'KAF AREF RUQAA';
+    src: url('../fonts/KAF-AREF-RUQAA-TITL-SW-.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Reset & Base */
 *, *::before, *::after {
     margin: 0;
@@ -1532,6 +1541,11 @@ html[dir="rtl"],
 body.rtl {
     direction: rtl;
     text-align: right;
+    font-family: 'KAF AREF RUQAA', 'Chillax', sans-serif;
+}
+
+html[dir="rtl"] * {
+    font-family: 'KAF AREF RUQAA', 'Chillax', sans-serif;
 }
 
 /* Navbar RTL - CRITICAL: Keep layout stable */
