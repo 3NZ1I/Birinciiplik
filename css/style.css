@@ -20,11 +20,11 @@
     --transition: all 0.3s ease;
 }
 
-/* Arabic Font - KAF AREF RUQAA */
+/* Arabic Font - Quest Bold */
 @font-face {
-    font-family: 'KAF AREF RUQAA';
-    src: url('../fonts/KAF-AREF-RUQAA-TITL-SW-.otf') format('opentype');
-    font-weight: normal;
+    font-family: 'Quest Bold';
+    src: url('../fonts/Questv1-Bold.otf') format('opentype');
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
@@ -1541,11 +1541,11 @@ html[dir="rtl"],
 body.rtl {
     direction: rtl;
     text-align: right;
-    font-family: 'KAF AREF RUQAA', 'Chillax', sans-serif;
+    font-family: 'Quest Bold', 'Chillax', sans-serif;
 }
 
 html[dir="rtl"] * {
-    font-family: 'KAF AREF RUQAA', 'Chillax', sans-serif;
+    font-family: 'Quest Bold', 'Chillax', sans-serif;
 }
 
 /* Navbar RTL - CRITICAL: Keep layout stable */
