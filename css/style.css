@@ -1348,6 +1348,15 @@ html[dir="rtl"] .navbar .quote-btn {
 .contact-card-icon {
     font-size: 2rem;
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+}
+
+.contact-card-icon img {
+    display: block;
+    margin: 0 auto;
 }
 
 .contact-card h3 {
