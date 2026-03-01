@@ -170,10 +170,39 @@ document.addEventListener('DOMContentLoaded', function() {
     if (threadLine && yarnBall && catContainer) {
         let catReached = false;
         
-        // Fixed positions
-        const startY = 160; // Where thread starts (bottom of needles)
-        const minBallY = startY + 30; // Minimum thread length
-        const maxBallY = window.innerHeight - 180; // Max before cat
+        // Get section positions dynamically
+        const featuresSection = document.querySelector('.features');
+        const contactCtaSection = document.querySelector('.contact-cta');
+        
+        function updateAnimationPositions() {
+            if (featuresSection) {
+                const featuresTop = featuresSection.offsetTop;
+                const needlesY = featuresTop - 80; // 80px above features section
+                
+                // Update needles position
+                document.querySelector('.knitting-needles').style.top = needlesY + 'px';
+                
+                // Update thread start position (below needles)
+                const threadStartY = needlesY + 80;
+                threadLine.style.top = threadStartY + 'px';
+                yarnBall.style.top = threadStartY + 'px';
+            }
+            
+            if (contactCtaSection) {
+                const contactCtaBottom = contactCtaSection.offsetTop + contactCtaSection.offsetHeight;
+                // Cat position at end of contact-cta
+                const catY = window.innerHeight - contactCtaBottom + 50;
+                catContainer.style.bottom = '250px';
+            }
+        }
+        
+        // Initial position update
+        setTimeout(updateAnimationPositions, 100);
+        
+        // Fixed positions after calculation
+        const startY = 580; // Will be updated by updateAnimationPositions
+        const minBallY = startY + 30;
+        const maxBallY = window.innerHeight - 280; // Before cat
         
         window.addEventListener('scroll', function() {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -200,14 +229,14 @@ document.addEventListener('DOMContentLoaded', function() {
             if (scrollPercent > 0.90 && !catReached) {
                 catReached = true;
                 
-                // Move ball to cat (cat is fixed at bottom: 100px, left: 35px, scaled 0.65)
+                // Move ball to cat (cat is fixed at bottom: 250px, left: 35px, scaled 0.65)
                 yarnBall.style.transition = 'all 0.4s ease';
-                yarnBall.style.top = (window.innerHeight - 145) + 'px';
+                yarnBall.style.top = (window.innerHeight - 295) + 'px';
                 yarnBall.style.left = '65px';
                 
                 // Adjust thread to follow ball
                 threadLine.style.transition = 'height 0.4s ease';
-                threadLine.style.height = (window.innerHeight - 305) + 'px';
+                threadLine.style.height = (window.innerHeight - 545) + 'px';
                 
                 // Show cat message
                 setTimeout(() => {
@@ -228,6 +257,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 catContainer.classList.remove('visible');
             }
         });
+        
+        // Update positions on resize
+        window.addEventListener('resize', updateAnimationPositions);
     }
     
     // Add cat play animation dynamically
