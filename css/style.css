@@ -642,6 +642,37 @@ ul {
     transform: scale(1.2);
 }
 
+/* Social Icons SVG Styling */
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    color: var(--bg-white);
+    transition: var(--transition);
+}
+
+.social-icon:hover {
+    color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.social-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.social-links.large .social-icon {
+    width: 44px;
+    height: 44px;
+}
+
+.social-links.large .social-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: 30px;
