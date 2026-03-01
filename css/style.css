@@ -356,6 +356,9 @@ ul {
     text-align: center;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .feature-card:hover {
@@ -364,23 +367,33 @@ ul {
 }
 
 .feature-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 80px;
+    min-height: 100px;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .feature-icon img {
     display: block;
     margin: 0 auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .feature-card h3 {
     font-size: 1.25rem;
     margin-bottom: 15px;
     color: var(--primary-color);
+    text-align: center;
+    width: 100%;
+}
+
+.feature-card p {
+    color: var(--text-light);
+    text-align: center;
+    width: 100%;
 }
 
 .feature-card p {
@@ -835,6 +848,7 @@ html[dir="rtl"] .navbar .quote-btn {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
 }
 
 .cert-card:hover {
@@ -844,18 +858,19 @@ html[dir="rtl"] .navbar .quote-btn {
 }
 
 .cert-icon {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 80px;
+    min-height: 100px;
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .cert-icon img {
     display: block;
     margin: 0 auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .cert-card h3 {
@@ -863,12 +878,14 @@ html[dir="rtl"] .navbar .quote-btn {
     margin-bottom: 10px;
     color: var(--primary-color);
     text-align: center;
+    width: 100%;
 }
 
 .cert-card p {
     color: var(--text-light);
     font-size: 0.95rem;
     text-align: center;
+    width: 100%;
 }
 
 /* Newsletter Form */
