@@ -1021,6 +1021,15 @@ html[dir="rtl"] .navbar .quote-btn {
 .quality-icon {
     font-size: 3rem;
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+}
+
+.quality-icon img {
+    display: block;
+    margin: 0 auto;
 }
 
 .quality-card h3 {
