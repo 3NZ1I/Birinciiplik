@@ -160,6 +160,86 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // ========================================
+    // Scrolling Animation - Knitting & Cat
+    // ========================================
+    const threadLine = document.getElementById('threadLine');
+    const yarnBall = document.getElementById('yarnBall');
+    const catContainer = document.getElementById('catContainer');
+    const catMessage = document.getElementById('catMessage');
+    
+    if (threadLine && yarnBall && catContainer) {
+        let catReached = false;
+        
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = scrollTop / docHeight;
+            
+            // Calculate thread length based on scroll
+            const maxThreadLength = window.innerHeight - 200;
+            const threadLength = Math.min(scrollPercent * maxThreadLength * 1.5, maxThreadLength);
+            
+            // Update thread line height
+            threadLine.style.height = threadLength + 'px';
+            
+            // Update yarn ball position
+            const ballPosition = 140 + threadLength;
+            yarnBall.style.top = ballPosition + 'px';
+            
+            // Show cat when scrolling near bottom (80% down)
+            if (scrollPercent > 0.7 && !catContainer.classList.contains('visible')) {
+                catContainer.classList.add('visible');
+            }
+            
+            // Cat catches ball at 95% scroll
+            if (scrollPercent > 0.95 && !catReached) {
+                catReached = true;
+                
+                // Move ball to cat
+                yarnBall.style.transition = 'all 0.5s ease';
+                yarnBall.style.top = (window.innerHeight - 100) + 'px';
+                yarnBall.style.left = (window.innerWidth * 0.9 - 60) + 'px';
+                
+                // Shorten thread
+                threadLine.style.transition = 'height 0.5s ease';
+                threadLine.style.height = (window.innerHeight - 240) + 'px';
+                
+                // Show cat message
+                setTimeout(() => {
+                    catMessage.classList.add('visible');
+                    
+                    // Cat plays with ball animation
+                    yarnBall.style.animation = 'catPlay 0.5s ease-in-out infinite alternate';
+                }, 500);
+            }
+            
+            // Reset when scrolling back up
+            if (scrollPercent < 0.9 && catReached) {
+                catReached = false;
+                yarnBall.style.transition = 'top 0.1s ease';
+                yarnBall.style.left = '50%';
+                yarnBall.style.animation = '';
+                catMessage.classList.remove('visible');
+                catContainer.classList.remove('visible');
+            }
+        });
+    }
+    
+    // Add cat play animation dynamically
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes catPlay {
+            0% {
+                transform: translateX(-50%) rotate(-10deg);
+            }
+            100% {
+                transform: translateX(-50%) rotate(10deg);
+            }
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // ========================================
     // Notification System
     // ========================================
     function showNotification(message, type = 'info') {

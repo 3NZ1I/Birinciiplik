@@ -905,8 +905,410 @@ html[dir="rtl"] .navbar .quote-btn {
     width: 100%;
 }
 
-/* Newsletter Form */
-.newsletter-form {
+/* ========================================
+   Scrolling Animation - Knitting & Cat
+   ======================================== */
+
+.scroll-animation-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+/* Knitting Needles */
+.knitting-needles {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 150px;
+}
+
+.needle {
+    position: absolute;
+    width: 8px;
+    height: 120px;
+}
+
+.needle-left {
+    left: 40px;
+    transform: rotate(-30deg);
+}
+
+.needle-right {
+    right: 40px;
+    transform: rotate(30deg);
+}
+
+.needle-body {
+    width: 100%;
+    height: 80%;
+    background: linear-gradient(90deg, #c5a065, #d4b075, #c5a065);
+    border-radius: 4px;
+    position: absolute;
+    bottom: 0;
+}
+
+.needle-tip {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 25px solid #d4b075;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.thread-start {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 20px;
+    background: linear-gradient(180deg, #c5a065, #d4b075);
+}
+
+/* Thread Line */
+.thread-line {
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 0;
+    background: linear-gradient(180deg, #c5a065, #d4b075);
+    transition: height 0.1s ease;
+}
+
+.thread-segment {
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        180deg,
+        #c5a065,
+        #c5a065 10px,
+        #d4b075 10px,
+        #d4b075 20px
+    );
+}
+
+/* Yarn Ball */
+.yarn-ball {
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #d4b075, #c5a065, #a08040);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: top 0.1s ease;
+    overflow: hidden;
+}
+
+.yarn-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid rgba(160, 128, 64, 0.5);
+    animation: yarnRotate 3s linear infinite;
+}
+
+.yarn-wrap.delay-1 {
+    animation-delay: 1s;
+}
+
+.yarn-wrap.delay-2 {
+    animation-delay: 2s;
+}
+
+.yarn-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #e0c080, #c5a065);
+}
+
+@keyframes yarnRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Cat Container */
+.cat-container {
+    position: absolute;
+    bottom: -200px;
+    right: 10%;
+    transition: bottom 0.3s ease;
+}
+
+.cat-container.visible {
+    bottom: 20px;
+}
+
+/* Cat */
+.cat {
+    position: relative;
+    width: 120px;
+    height: 100px;
+}
+
+.cat-ears {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 20px;
+}
+
+.ear {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 25px solid #2c2c2c;
+}
+
+.ear.left {
+    left: 0;
+    transform: rotate(-15deg);
+}
+
+.ear.right {
+    right: 0;
+    transform: rotate(15deg);
+}
+
+.cat-head {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 60px;
+    background: radial-gradient(circle, #3a3a3a, #2c2c2c);
+    border-radius: 50% 50% 45% 45%;
+}
+
+.cat-eye {
+    position: absolute;
+    top: 20px;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: catBlink 4s ease-in-out infinite;
+}
+
+.cat-eye.left {
+    left: 12px;
+}
+
+.cat-eye.right {
+    right: 12px;
+}
+
+.pupil {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 14px;
+    background: #000;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.cat-nose {
+    position: absolute;
+    top: 42px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 8px;
+    background: #ff9999;
+    border-radius: 50%;
+}
+
+.cat-mouth {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 10px;
+}
+
+.cat-mouth::before,
+.cat-mouth::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 8px;
+    border: 2px solid #ff9999;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+}
+
+.cat-mouth::before {
+    left: 0;
+}
+
+.cat-mouth::after {
+    right: 0;
+}
+
+.cat-whiskers {
+    position: absolute;
+    top: 45px;
+    width: 30px;
+}
+
+.cat-whiskers.left {
+    left: -25px;
+}
+
+.cat-whiskers.right {
+    right: -25px;
+}
+
+.whisker {
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    margin: 4px 0;
+    border-radius: 1px;
+}
+
+.cat-body {
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 50px;
+    background: radial-gradient(circle, #3a3a3a, #2c2c2c);
+    border-radius: 40px 40px 30px 30px;
+}
+
+.cat-paw {
+    position: absolute;
+    bottom: -5px;
+    width: 20px;
+    height: 15px;
+    background: #2c2c2c;
+    border-radius: 10px 10px 5px 5px;
+}
+
+.cat-paw.left {
+    left: 15px;
+}
+
+.cat-paw.right {
+    right: 15px;
+}
+
+.cat-tail {
+    position: absolute;
+    top: 60px;
+    right: -30px;
+    width: 40px;
+    height: 40px;
+}
+
+.tail-segment {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #2c2c2c;
+    border-radius: 50%;
+    animation: tailWag 2s ease-in-out infinite;
+}
+
+.tail-segment:nth-child(1) {
+    bottom: 0;
+    left: 0;
+}
+
+.tail-segment:nth-child(2) {
+    bottom: 10px;
+    left: 10px;
+    animation-delay: 0.1s;
+}
+
+.tail-segment:nth-child(3) {
+    bottom: 20px;
+    left: 20px;
+    animation-delay: 0.2s;
+}
+
+@keyframes tailWag {
+    0%, 100% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes catBlink {
+    0%, 48%, 52%, 100% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(0.1);
+    }
+}
+
+/* Cat Message */
+.cat-message {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cat-message.visible {
+    opacity: 1;
+}
+
+/* Hide animation on mobile */
+@media (max-width: 768px) {
+    .scroll-animation-container {
+        display: none;
+    }
+}
     display: flex;
     flex-direction: column;
     gap: 10px;
