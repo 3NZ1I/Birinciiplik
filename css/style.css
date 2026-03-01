@@ -688,18 +688,18 @@ ul {
     justify-content: center;
     width: 36px;
     height: 36px;
-    color: var(--bg-white);
+    color: var(--primary-color) !important;
     transition: var(--transition);
 }
 
 .social-icon svg {
     width: 24px;
     height: 24px;
-    fill: currentColor;
+    fill: currentColor !important;
 }
 
 .social-icon:hover {
-    color: var(--secondary-color);
+    color: var(--secondary-color) !important;
     transform: scale(1.1);
 }
 
@@ -1836,6 +1836,23 @@ html[dir="rtl"] .navbar .quote-btn {
     margin-bottom: 15px;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    transition: var(--transition);
+    color: var(--primary-color) !important;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    color: var(--secondary-color) !important;
 }
 
 .social-links.large {
