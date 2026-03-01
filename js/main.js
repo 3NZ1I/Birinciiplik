@@ -171,41 +171,43 @@ document.addEventListener('DOMContentLoaded', function() {
         let catReached = false;
         
         // Fixed positions
-        const startY = 240; // Where thread starts (bottom of needles)
-        const maxScrollY = window.innerHeight - 200; // Max yarn position
+        const startY = 160; // Where thread starts (bottom of needles)
+        const minBallY = startY + 30; // Minimum thread length
+        const maxBallY = window.innerHeight - 180; // Max before cat
         
         window.addEventListener('scroll', function() {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             const docHeight = document.documentElement.scrollHeight - window.innerHeight;
             const scrollPercent = Math.min(scrollTop / docHeight, 1);
             
-            // Calculate thread length based on scroll
-            const threadLength = Math.min(scrollPercent * (maxScrollY - startY), maxScrollY - startY);
+            // Calculate thread length (within bounds)
+            const availableLength = maxBallY - minBallY;
+            const threadLength = Math.min(scrollPercent * availableLength, availableLength);
+            const currentBallY = minBallY + threadLength;
             
             // Update thread line height
             threadLine.style.height = threadLength + 'px';
             
-            // Update yarn ball position (aligned with thread)
-            const ballPosition = startY + threadLength;
-            yarnBall.style.top = ballPosition + 'px';
+            // Update yarn ball position
+            yarnBall.style.top = currentBallY + 'px';
             
-            // Show cat when scrolling near bottom (75% down)
-            if (scrollPercent > 0.75 && !catContainer.classList.contains('visible')) {
+            // Show cat when scrolling near bottom (70% down) - cat stays fixed
+            if (scrollPercent > 0.70 && !catContainer.classList.contains('visible')) {
                 catContainer.classList.add('visible');
             }
             
-            // Cat catches ball at 92% scroll
-            if (scrollPercent > 0.92 && !catReached) {
+            // Cat catches ball at 90% scroll
+            if (scrollPercent > 0.90 && !catReached) {
                 catReached = true;
                 
-                // Move ball to cat (cat is at bottom: 150px, left: 40px)
-                yarnBall.style.transition = 'all 0.5s ease';
-                yarnBall.style.top = (window.innerHeight - 170) + 'px';
-                yarnBall.style.left = '70px';
+                // Move ball to cat (cat is fixed at bottom: 100px, left: 35px, scaled 0.65)
+                yarnBall.style.transition = 'all 0.4s ease';
+                yarnBall.style.top = (window.innerHeight - 145) + 'px';
+                yarnBall.style.left = '65px';
                 
                 // Adjust thread to follow ball
-                threadLine.style.transition = 'height 0.5s ease';
-                threadLine.style.height = (window.innerHeight - 410) + 'px';
+                threadLine.style.transition = 'height 0.4s ease';
+                threadLine.style.height = (window.innerHeight - 305) + 'px';
                 
                 // Show cat message
                 setTimeout(() => {
@@ -213,14 +215,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     // Cat plays with ball animation
                     yarnBall.style.animation = 'catPlay 0.5s ease-in-out infinite alternate';
-                }, 500);
+                }, 400);
             }
             
             // Reset when scrolling back up
-            if (scrollPercent < 0.85 && catReached) {
+            if (scrollPercent < 0.80 && catReached) {
                 catReached = false;
-                yarnBall.style.transition = 'top 0.1s ease, left 0.3s ease';
-                yarnBall.style.left = '50px';
+                yarnBall.style.transition = 'top 0.05s ease, left 0.3s ease';
+                yarnBall.style.left = '40px';
                 yarnBall.style.animation = '';
                 catMessage.classList.remove('visible');
                 catContainer.classList.remove('visible');

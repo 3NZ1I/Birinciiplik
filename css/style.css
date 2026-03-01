@@ -920,76 +920,92 @@ html[dir="rtl"] .navbar .quote-btn {
     overflow: hidden;
 }
 
-/* Knitting Needles - FIXED position, Left Side */
+/* Knitting Needles - FIXED under header, X shape, Realistic */
 .knitting-needles {
     position: fixed;
-    top: 160px;
-    left: 50px;
-    width: 120px;
-    height: 100px;
+    top: 80px; /* Right under navbar */
+    left: 40px;
+    width: 80px;
+    height: 80px;
     z-index: 1000;
 }
 
 .needle {
     position: absolute;
-    width: 5px;
-    height: 80px;
+    width: 6px;
+    height: 70px;
+    left: 50%;
+    top: 5px;
 }
 
 .needle-left {
-    left: 20px;
-    transform: rotate(-30deg);
+    transform: translateX(-50%) rotate(-45deg);
 }
 
 .needle-right {
-    right: 20px;
-    transform: rotate(30deg);
+    transform: translateX(-50%) rotate(45deg);
 }
 
 .needle-body {
     width: 100%;
-    height: 80%;
-    background: linear-gradient(90deg, #d4b075, #e8c890, #d4b075);
+    height: 85%;
+    background: linear-gradient(90deg, #b89050, #f0d0a0, #e8c890, #f0d0a0, #b89050);
     border-radius: 3px;
     position: absolute;
     bottom: 0;
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    box-shadow: 
+        inset 0 0 3px rgba(255,255,255,0.5),
+        1px 1px 4px rgba(0,0,0,0.3);
 }
 
 .needle-tip {
     width: 0;
     height: 0;
-    border-left: 2.5px solid transparent;
-    border-right: 2.5px solid transparent;
-    border-bottom: 18px solid #e8c890;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 12px solid #d4b075;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    filter: brightness(1.2);
+}
+
+.needle-grip {
+    width: 8px;
+    height: 20px;
+    background: linear-gradient(90deg, #8b7040, #a08040, #8b7040);
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
 
 .thread-start {
     position: absolute;
-    top: 80px;
+    bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
     width: 3px;
-    height: 15px;
+    height: 12px;
     background: linear-gradient(180deg, #c5a065, #d4b075);
+    border-radius: 0 0 2px 2px;
 }
 
-/* Thread Line - FIXED position, aligned with needles and ball */
+/* Thread Line - FIXED, only height changes */
 .thread-line {
     position: fixed;
-    top: 240px;
-    left: 50px;
+    top: 160px; /* Bottom of needles */
+    left: 40px;
     transform: translateX(-50%);
     width: 3px;
     height: 0;
     background: linear-gradient(180deg, #c5a065, #d4b075);
-    transition: height 0.1s ease;
-    box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-    z-index: 999;
+    transition: height 0.05s ease;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    z-index: 998;
 }
 
 .thread-segment {
@@ -998,29 +1014,141 @@ html[dir="rtl"] .navbar .quote-btn {
     background: repeating-linear-gradient(
         180deg,
         #c5a065,
-        #c5a065 5px,
-        #d4b075 5px,
-        #d4b075 10px
+        #c5a065 4px,
+        #d4b075 4px,
+        #d4b075 8px
     );
 }
 
-/* Yarn Ball - More Realistic & Detailed */
+/* Yarn Ball - Smaller, More Realistic */
 .yarn-ball {
     position: fixed;
-    top: 240px;
-    left: 50px;
+    top: 160px;
+    left: 40px;
     transform: translateX(-50%);
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    background: radial-gradient(circle at 35% 35%, #f0d0a0, #d4b075, #b89050, #a08040);
+    background: radial-gradient(circle at 35% 35%, #f5d5b0, #d4b075, #c09050, #a08040);
     box-shadow: 
-        inset -5px -5px 15px rgba(0,0,0,0.3),
-        inset 5px 5px 15px rgba(255,255,255,0.2),
-        2px 3px 10px rgba(0,0,0,0.3);
-    transition: top 0.1s ease, left 0.3s ease;
+        inset -4px -4px 12px rgba(0,0,0,0.4),
+        inset 4px 4px 12px rgba(255,255,255,0.3),
+        2px 3px 8px rgba(0,0,0,0.4);
+    transition: top 0.05s ease, left 0.3s ease;
     overflow: hidden;
+    z-index: 999;
+}
+
+/* Yarn wrapping - multiple realistic layers */
+.yarn-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid rgba(160, 128, 64, 0.5);
+    animation: yarnRotate 4s linear infinite;
+}
+
+.yarn-wrap::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(160, 128, 64, 0.4);
+    transform: translateY(-50%);
+}
+
+.yarn-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background: rgba(160, 128, 64, 0.4);
+    transform: translateX(-50%);
+}
+
+.yarn-wrap.delay-1 {
+    animation-delay: 1.33s;
+}
+
+.yarn-wrap.delay-1::before {
+    transform: translateY(-50%) rotate(60deg);
+}
+
+.yarn-wrap.delay-1::after {
+    transform: translateX(-50%) rotate(60deg);
+}
+
+.yarn-wrap.delay-2 {
+    animation-delay: 2.66s;
+}
+
+.yarn-wrap.delay-2::before {
+    transform: translateY(-50%) rotate(120deg);
+}
+
+.yarn-wrap.delay-2::after {
+    transform: translateX(-50%) rotate(120deg);
+}
+
+/* Yarn center hole - realistic */
+.yarn-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #6b5030, #8b7040);
+    box-shadow: 
+        inset 1px 1px 2px rgba(0,0,0,0.6),
+        0 0 2px rgba(0,0,0,0.3);
+}
+
+/* Yarn texture fibers */
+.yarn-texture {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: repeating-conic-gradient(
+        from 0deg,
+        rgba(245, 213, 176, 0.3) 0deg 8deg,
+        rgba(212, 176, 117, 0.3) 8deg 16deg
+    );
+    animation: yarnRotate 6s linear infinite reverse;
+}
+
+@keyframes yarnRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Cat - FIXED before footer, no movement */
+.cat-container {
+    position: fixed;
+    bottom: 100px; /* Before footer */
+    left: 35px;
+    transform: scale(0.65);
+    transform-origin: bottom left;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
     z-index: 1000;
+}
+
+.cat-container.visible {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Yarn wrapping details - multiple layers */
