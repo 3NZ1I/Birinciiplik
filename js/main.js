@@ -148,40 +148,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // ========================================
-    // Contact Form Handler
+    // Contact Form Handler (Formspree)
     // ========================================
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
-            
-            // Validate form
-            if (!data.name || !data.email || !data.subject || !data.message) {
-                showNotification('Please fill in all required fields.', 'error');
-                return;
-            }
-            
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(data.email)) {
-                showNotification('Please enter a valid email address.', 'error');
-                return;
-            }
-            
-            // In a real implementation, this would send the form data to a server
-            // For now, we'll just show a success message
-            console.log('Form submitted:', data);
-            
-            // Show success message
-            showNotification('Thank you for your message! We will get back to you soon.', 'success');
-            
-            // Reset form
-            contactForm.reset();
+            // Formspree handles the submission
+            // You can add custom validation here if needed
         });
     }
     
