@@ -171,9 +171,9 @@ document.addEventListener('DOMContentLoaded', function() {
         let catReached = false;
         
         // Fixed positions
-        const startY = 180; // Where thread starts
+        const startY = 160; // Where thread starts (bottom of needles)
         const minBallY = startY + 30; // Minimum thread length
-        const maxBallY = window.innerHeight - 280; // Max before cat
+        const maxBallY = window.innerHeight - 180; // Max before cat
         
         window.addEventListener('scroll', function() {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -200,14 +200,14 @@ document.addEventListener('DOMContentLoaded', function() {
             if (scrollPercent > 0.90 && !catReached) {
                 catReached = true;
                 
-                // Move ball to cat (cat is fixed at bottom: 250px, left: 35px, scaled 0.65)
+                // Move ball to cat (cat is fixed at bottom: 100px, left: 35px, scaled 0.65)
                 yarnBall.style.transition = 'all 0.4s ease';
-                yarnBall.style.top = (window.innerHeight - 295) + 'px';
+                yarnBall.style.top = (window.innerHeight - 145) + 'px';
                 yarnBall.style.left = '65px';
                 
                 // Adjust thread to follow ball
                 threadLine.style.transition = 'height 0.4s ease';
-                threadLine.style.height = (window.innerHeight - 545) + 'px';
+                threadLine.style.height = (window.innerHeight - 305) + 'px';
                 
                 // Show cat message
                 setTimeout(() => {

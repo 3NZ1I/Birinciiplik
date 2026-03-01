@@ -920,10 +920,10 @@ html[dir="rtl"] .navbar .quote-btn {
     overflow: hidden;
 }
 
-/* Knitting Needles - FIXED position */
+/* Knitting Needles - FIXED under header, X shape, Realistic */
 .knitting-needles {
     position: fixed;
-    top: 100px;
+    top: 80px; /* Right under navbar */
     left: 40px;
     width: 80px;
     height: 80px;
@@ -997,7 +997,7 @@ html[dir="rtl"] .navbar .quote-btn {
 /* Thread Line - FIXED, only height changes */
 .thread-line {
     position: fixed;
-    top: 180px;
+    top: 160px; /* Bottom of needles */
     left: 40px;
     transform: translateX(-50%);
     width: 3px;
@@ -1023,7 +1023,7 @@ html[dir="rtl"] .navbar .quote-btn {
 /* Yarn Ball - Smaller, More Realistic */
 .yarn-ball {
     position: fixed;
-    top: 180px;
+    top: 160px;
     left: 40px;
     transform: translateX(-50%);
     width: 45px;
@@ -1133,10 +1133,10 @@ html[dir="rtl"] .navbar .quote-btn {
     }
 }
 
-/* Cat - FIXED at contact-cta section end, before footer */
+/* Cat - FIXED before footer, no movement */
 .cat-container {
     position: fixed;
-    bottom: 250px; /* At end of contact-cta section */
+    bottom: 100px; /* Before footer */
     left: 35px;
     transform: scale(0.65);
     transform-origin: bottom left;
