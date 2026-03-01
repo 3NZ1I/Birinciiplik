@@ -1311,22 +1311,26 @@ body.rtl {
     text-align: right;
 }
 
-/* Navbar RTL - Keep layout stable */
-html[dir="rtl"] .nav-wrapper {
-    direction: rtl;
+/* Navbar RTL - CRITICAL: Keep layout stable */
+html[dir="rtl"] .navbar .nav-wrapper {
+    direction: ltr !important;
 }
 
-html[dir="rtl"] .nav-menu {
+html[dir="rtl"] .navbar .nav-menu {
     gap: 30px;
-    direction: rtl;
+    direction: ltr !important;
 }
 
-html[dir="rtl"] .logo {
-    direction: rtl;
+html[dir="rtl"] .navbar .logo {
+    direction: ltr !important;
 }
 
-html[dir="rtl"] .lang-switch {
-    direction: rtl;
+html[dir="rtl"] .navbar .lang-switch {
+    direction: ltr !important;
+}
+
+html[dir="rtl"] .navbar .nav-link {
+    direction: rtl !important;
 }
 
 html[dir="rtl"] .hero-buttons {
