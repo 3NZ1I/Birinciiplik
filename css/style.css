@@ -916,51 +916,51 @@ html[dir="rtl"] .navbar .quote-btn {
     width: 100%;
     height: 100vh;
     pointer-events: none;
-    z-index: 9999;
+    z-index: 999;
     overflow: hidden;
 }
 
-/* Knitting Needles */
+/* Knitting Needles - Smaller, Left Side */
 .knitting-needles {
     position: absolute;
-    top: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
-    height: 150px;
+    top: 160px;
+    left: 30px;
+    width: 120px;
+    height: 100px;
 }
 
 .needle {
     position: absolute;
-    width: 8px;
-    height: 120px;
+    width: 5px;
+    height: 80px;
 }
 
 .needle-left {
-    left: 40px;
+    left: 20px;
     transform: rotate(-30deg);
 }
 
 .needle-right {
-    right: 40px;
+    right: 20px;
     transform: rotate(30deg);
 }
 
 .needle-body {
     width: 100%;
     height: 80%;
-    background: linear-gradient(90deg, #c5a065, #d4b075, #c5a065);
-    border-radius: 4px;
+    background: linear-gradient(90deg, #d4b075, #e8c890, #d4b075);
+    border-radius: 3px;
     position: absolute;
     bottom: 0;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .needle-tip {
     width: 0;
     height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-bottom: 25px solid #d4b075;
+    border-left: 2.5px solid transparent;
+    border-right: 2.5px solid transparent;
+    border-bottom: 18px solid #e8c890;
     position: absolute;
     top: 0;
     left: 50%;
@@ -969,24 +969,25 @@ html[dir="rtl"] .navbar .quote-btn {
 
 .thread-start {
     position: absolute;
-    top: 120px;
+    top: 80px;
     left: 50%;
     transform: translateX(-50%);
-    width: 4px;
-    height: 20px;
+    width: 3px;
+    height: 15px;
     background: linear-gradient(180deg, #c5a065, #d4b075);
 }
 
-/* Thread Line */
+/* Thread Line - More Detailed */
 .thread-line {
     position: absolute;
-    top: 140px;
-    left: 50%;
+    top: 175px;
+    left: 30px;
     transform: translateX(-50%);
     width: 3px;
     height: 0;
     background: linear-gradient(180deg, #c5a065, #d4b075);
     transition: height 0.1s ease;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .thread-segment {
@@ -995,53 +996,113 @@ html[dir="rtl"] .navbar .quote-btn {
     background: repeating-linear-gradient(
         180deg,
         #c5a065,
-        #c5a065 10px,
-        #d4b075 10px,
-        #d4b075 20px
+        #c5a065 5px,
+        #d4b075 5px,
+        #d4b075 10px
     );
 }
 
-/* Yarn Ball */
+/* Yarn Ball - More Realistic & Detailed */
 .yarn-ball {
     position: absolute;
-    top: 140px;
-    left: 50%;
+    top: 175px;
+    left: 30px;
     transform: translateX(-50%);
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    background: radial-gradient(circle at 30% 30%, #d4b075, #c5a065, #a08040);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    transition: top 0.1s ease;
+    background: radial-gradient(circle at 35% 35%, #f0d0a0, #d4b075, #b89050, #a08040);
+    box-shadow: 
+        inset -5px -5px 15px rgba(0,0,0,0.3),
+        inset 5px 5px 15px rgba(255,255,255,0.2),
+        2px 3px 10px rgba(0,0,0,0.3);
+    transition: top 0.1s ease, left 0.3s ease;
     overflow: hidden;
+    position: relative;
 }
 
+/* Yarn wrapping details - multiple layers */
 .yarn-wrap {
     position: absolute;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 2px solid rgba(160, 128, 64, 0.5);
-    animation: yarnRotate 3s linear infinite;
+    border: 2px solid rgba(184, 144, 80, 0.4);
+    animation: yarnRotate 4s linear infinite;
+}
+
+.yarn-wrap::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(184, 144, 80, 0.3);
+    transform: translateY(-50%);
+}
+
+.yarn-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: rgba(184, 144, 80, 0.3);
+    transform: translateX(-50%);
 }
 
 .yarn-wrap.delay-1 {
-    animation-delay: 1s;
+    animation-delay: 1.33s;
+}
+
+.yarn-wrap.delay-1::before {
+    transform: translateY(-50%) rotate(60deg);
+}
+
+.yarn-wrap.delay-1::after {
+    transform: translateX(-50%) rotate(60deg);
 }
 
 .yarn-wrap.delay-2 {
-    animation-delay: 2s;
+    animation-delay: 2.66s;
 }
 
+.yarn-wrap.delay-2::before {
+    transform: translateY(-50%) rotate(120deg);
+}
+
+.yarn-wrap.delay-2::after {
+    transform: translateX(-50%) rotate(120deg);
+}
+
+/* Yarn center hole */
 .yarn-center {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    background: radial-gradient(circle, #e0c080, #c5a065);
+    background: radial-gradient(circle, #8b7040, #a08040);
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Additional yarn texture lines */
+.yarn-texture {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: 
+        repeating-conic-gradient(
+            from 0deg,
+            rgba(212, 176, 117, 0.3) 0deg 10deg,
+            rgba(184, 144, 80, 0.3) 10deg 20deg
+        );
+    animation: yarnRotate 5s linear infinite reverse;
 }
 
 @keyframes yarnRotate {
@@ -1053,16 +1114,18 @@ html[dir="rtl"] .navbar .quote-btn {
     }
 }
 
-/* Cat Container */
+/* Cat Container - Smaller, Left Side */
 .cat-container {
     position: absolute;
-    bottom: -200px;
-    right: 10%;
+    bottom: -150px;
+    left: 20px;
     transition: bottom 0.3s ease;
+    transform: scale(0.7);
+    transform-origin: bottom left;
 }
 
 .cat-container.visible {
-    bottom: 20px;
+    bottom: 80px;
 }
 
 /* Cat */

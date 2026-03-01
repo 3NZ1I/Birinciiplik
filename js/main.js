@@ -170,39 +170,43 @@ document.addEventListener('DOMContentLoaded', function() {
     if (threadLine && yarnBall && catContainer) {
         let catReached = false;
         
+        // Calculate available scroll area (header to footer)
+        const headerHeight = 160; // Start position after header
+        const footerOffset = 150; // Stop before footer
+        
         window.addEventListener('scroll', function() {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrollPercent = scrollTop / docHeight;
+            const scrollPercent = Math.min(scrollTop / docHeight, 1);
             
-            // Calculate thread length based on scroll
-            const maxThreadLength = window.innerHeight - 200;
-            const threadLength = Math.min(scrollPercent * maxThreadLength * 1.5, maxThreadLength);
+            // Calculate thread length based on scroll (adjusted range)
+            const maxThreadLength = window.innerHeight - headerHeight - footerOffset - 100;
+            const threadLength = Math.min(scrollPercent * maxThreadLength * 1.2, maxThreadLength);
             
             // Update thread line height
             threadLine.style.height = threadLength + 'px';
             
             // Update yarn ball position
-            const ballPosition = 140 + threadLength;
+            const ballPosition = headerHeight + threadLength;
             yarnBall.style.top = ballPosition + 'px';
             
-            // Show cat when scrolling near bottom (80% down)
-            if (scrollPercent > 0.7 && !catContainer.classList.contains('visible')) {
+            // Show cat when scrolling near bottom (75% down)
+            if (scrollPercent > 0.75 && !catContainer.classList.contains('visible')) {
                 catContainer.classList.add('visible');
             }
             
-            // Cat catches ball at 95% scroll
-            if (scrollPercent > 0.95 && !catReached) {
+            // Cat catches ball at 92% scroll
+            if (scrollPercent > 0.92 && !catReached) {
                 catReached = true;
                 
                 // Move ball to cat
                 yarnBall.style.transition = 'all 0.5s ease';
-                yarnBall.style.top = (window.innerHeight - 100) + 'px';
-                yarnBall.style.left = (window.innerWidth * 0.9 - 60) + 'px';
+                yarnBall.style.top = (window.innerHeight - 120) + 'px';
+                yarnBall.style.left = '80px';
                 
                 // Shorten thread
                 threadLine.style.transition = 'height 0.5s ease';
-                threadLine.style.height = (window.innerHeight - 240) + 'px';
+                threadLine.style.height = (window.innerHeight - 280) + 'px';
                 
                 // Show cat message
                 setTimeout(() => {
@@ -214,10 +218,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Reset when scrolling back up
-            if (scrollPercent < 0.9 && catReached) {
+            if (scrollPercent < 0.85 && catReached) {
                 catReached = false;
-                yarnBall.style.transition = 'top 0.1s ease';
-                yarnBall.style.left = '50%';
+                yarnBall.style.transition = 'top 0.1s ease, left 0.3s ease';
+                yarnBall.style.left = '30px';
                 yarnBall.style.animation = '';
                 catMessage.classList.remove('visible');
                 catContainer.classList.remove('visible');
