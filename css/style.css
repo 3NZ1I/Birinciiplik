@@ -920,13 +920,14 @@ html[dir="rtl"] .navbar .quote-btn {
     overflow: hidden;
 }
 
-/* Knitting Needles - Smaller, Left Side */
+/* Knitting Needles - FIXED position, Left Side */
 .knitting-needles {
-    position: absolute;
+    position: fixed;
     top: 160px;
-    left: 30px;
+    left: 50px;
     width: 120px;
     height: 100px;
+    z-index: 1000;
 }
 
 .needle {
@@ -977,17 +978,18 @@ html[dir="rtl"] .navbar .quote-btn {
     background: linear-gradient(180deg, #c5a065, #d4b075);
 }
 
-/* Thread Line - More Detailed */
+/* Thread Line - FIXED position, aligned with needles and ball */
 .thread-line {
-    position: absolute;
-    top: 175px;
-    left: 30px;
+    position: fixed;
+    top: 240px;
+    left: 50px;
     transform: translateX(-50%);
     width: 3px;
     height: 0;
     background: linear-gradient(180deg, #c5a065, #d4b075);
     transition: height 0.1s ease;
     box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    z-index: 999;
 }
 
 .thread-segment {
@@ -1004,9 +1006,9 @@ html[dir="rtl"] .navbar .quote-btn {
 
 /* Yarn Ball - More Realistic & Detailed */
 .yarn-ball {
-    position: absolute;
-    top: 175px;
-    left: 30px;
+    position: fixed;
+    top: 240px;
+    left: 50px;
     transform: translateX(-50%);
     width: 50px;
     height: 50px;
@@ -1018,7 +1020,7 @@ html[dir="rtl"] .navbar .quote-btn {
         2px 3px 10px rgba(0,0,0,0.3);
     transition: top 0.1s ease, left 0.3s ease;
     overflow: hidden;
-    position: relative;
+    z-index: 1000;
 }
 
 /* Yarn wrapping details - multiple layers */
@@ -1114,18 +1116,20 @@ html[dir="rtl"] .navbar .quote-btn {
     }
 }
 
-/* Cat Container - Smaller, Left Side */
+/* Cat Container - FIXED position, Left Side, Before Footer */
 .cat-container {
-    position: absolute;
-    bottom: -150px;
-    left: 20px;
-    transition: bottom 0.3s ease;
+    position: fixed;
+    bottom: 150px;
+    left: 40px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
     transform: scale(0.7);
     transform-origin: bottom left;
+    opacity: 0;
+    z-index: 1000;
 }
 
 .cat-container.visible {
-    bottom: 80px;
+    opacity: 1;
 }
 
 /* Cat */
