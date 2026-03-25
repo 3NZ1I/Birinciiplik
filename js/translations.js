@@ -141,7 +141,23 @@ const translations = {
         'specialty-applications-4': 'Medical textiles',
         'specialty-applications-5': 'Protective clothing',
         'specialty-btn': 'Contact Us',
+
+        // New Products
+        'overlock-fabric-title': 'Carpet Overlock Fabrics',
+        'overlock-fabric-lead': 'Prepared carefully in every color and size according to customer demands.',
+        'overlock-fabric-desc': 'Carpet overlock fabric is a complementary application used to prevent the edges of carpets from unraveling, wear and tear, and fraying. In this process, strips (usually polyester, cotton, or synthetic) are selected according to the type and pattern of the carpet, prepared in special machines in the desired color and size, and sewn to the edge of the carpet.',
+        'overlock-fabric-benefit': 'This strengthens the edges of the carpet, extends its lifespan, and gives the product an aesthetic, neat and clean appearance.',
         
+        'overlock-thread-title': 'Overlock Thread (Polyester Needle Thread)',
+        'overlock-thread-lead': 'Original and high-quality carpet and fringe threads offered in different deniers from 900 to 2200.',
+        'overlock-thread-desc': 'Overlock polyester thread ensures that carpet edges are closed smoothly and securely. Thanks to its high strength, it shows resistance against abrasion, and with its color fastness, it maintains its original appearance for a long time.',
+        'overlock-thread-benefit': 'Its flexible structure offers trouble-free use in carpets of different thicknesses, while its smooth sewing performance provides a professional finish.',
+        
+        'warp-thread-title': 'Warp Thread (Topbaşı İpliği)',
+        'warp-thread-lead': 'High-strength, cotton-based warp threads offering reliable solutions for your production processes.',
+        'warp-thread-desc': 'Our cotton-based warp threads are manufactured with high tensile strength and quality standards to meet the demands of modern textile production.',
+        'warp-thread-benefit': 'Durability and quality standards provide reliable solutions for your production processes.',
+
         // Quality Section
         'quality-title': 'Quality Standards',
         'quality-subtitle': 'Every thread meets our rigorous quality standards',
@@ -392,7 +408,23 @@ const translations = {
         'specialty-applications-4': 'Tıbbi tekstiller',
         'specialty-applications-5': 'Koruyucu giysiler',
         'specialty-btn': 'İletişime Geç',
+
+        // New Products - Turkish
+        'overlock-fabric-title': 'Halı Overlok Kumaşları',
+        'overlock-fabric-lead': 'Müşteri talepleri doğrultusunda, her renk ve ölçü halı overlok kumaşları özenle hazırlanmakta ve teslim edilmektedir.',
+        'overlock-fabric-desc': 'Halı overlok kumaşı, halı kenarlarının sökülmesini, yıpranmasını ve püsküllenmesini önlemek amacıyla kullanılan tamamlayıcı bir uygulamadır. Bu işlemde, halının türü ve desenine uygun olarak seçilen (genellikle polyester, pamuk veya sentetik) şeritler, istenilen renk ve ebatlarda özel makinalarda kesilerek hazırlanır ve halı kenarına dikilir.',
+        'overlock-fabric-benefit': 'Bu sayede halının kenarları sağlamlaştırılır, kullanım ömrü uzatılır ve ürüne estetik, düzgün ve temiz bir görünüm kazandırılır.',
         
+        'overlock-thread-title': 'Overlok İpi (Polyester İğne İpi)',
+        'overlock-thread-lead': 'Orijinal ve yüksek kaliteli halı ile saçak iplikleri, 900\'den 2200\'e kadar farklı denyelerde, ihtiyacınıza özel olarak sunulmaktadır.',
+        'overlock-thread-desc': 'Overlok polyester ipliği, halı kenarlarının düzgün ve sağlam bir şekilde kapatılmasını sağlar. Yüksek mukavemeti sayesinde aşınmaya karşı direnç gösterir, renk dayanıklılığı ile uzun süre ilk günkü görünümünü korur.',
+        'overlock-thread-benefit': 'Esnek yapısı, farklı kalınlıktaki halılarda sorunsuz kullanım imkânı sunarken, düzgün dikiş performansı ile profesyonel bir bitiş sağlar.',
+        
+        'warp-thread-title': 'Topbaşı (Çözgü İpi) İpliği',
+        'warp-thread-lead': 'Yüksek mukavemetli, pamuk esaslı topbaşı (çözgü) iplikleri; dayanıklılığı ve kalite standartlarıyla üretim süreçleriniz için güvenilir çözümler sunmaktadır.',
+        'warp-thread-desc': 'Pamuk esaslı topbaşı ipliklerimiz, modern tekstil üretiminin taleplerini karşılamak için yüksek çekme mukavemeti ve kalite standartları ile üretilmektedir.',
+        'warp-thread-benefit': 'Dayanıklılık ve kalite standartları, üretim süreçleriniz için güvenilir çözümler sunar.',
+
         // Quality Section
         'quality-title': 'Kalite Standartları',
         'quality-subtitle': 'Her iplik katı kalite standartlarımıza uygundur',
@@ -643,7 +675,23 @@ const translations = {
         'specialty-applications-4': 'المنسوجات الطبية',
         'specialty-applications-5': 'الملابس الواقية',
         'specialty-btn': 'اتصل بنا',
+
+        // New Products - Arabic
+        'overlock-fabric-title': 'أقمشة الأوفرلوك للسجاد',
+        'overlock-fabric-lead': 'يتم إعداد أقمشة الأوفرلوك للسجاد بعناية بكل لون وحجم وفقًا لمتطلبات العملاء.',
+        'overlock-fabric-desc': 'قماش الأوفرلوك للسجاد هو تطبيق تكميلي يستخدم لمنع حواف السجاد من التفكك والتآكل والتهري. في هذه العملية، يتم اختيار شرائط (عادة من البوليستر أو القطن أو الاصطناعية) وفقًا لنوع السجاد ونمطه، ويتم إعدادها في آلات خاصة باللون والحجم المطلوبين، وتُخاط على حافة السجاد.',
+        'overlock-fabric-benefit': 'هذا يقوي حواف السجاد، ويطيل عمره الافتراضي، ويعطي المنتج مظهرًا جماليًا وأنيقًا ونظيفًا.',
         
+        'overlock-thread-title': 'خيط الأوفرلوك (خيط الإبرة من البوليستر)',
+        'overlock-thread-lead': 'خيوط السجاد والشرابة الأصلية عالية الجودة، متوفرة بمقاييس دنير مختلفة من 900 إلى 2200، وفقًا لاحتياجاتك.',
+        'overlock-thread-desc': 'يضمن خيط الأوفرلوك من البوليستر إغلاق حواف السجاد بسلاسة وأمان. بفضل قوته العالية، يقاوم التآكل، وبفضل ثبات لونه، يحافظ على مظهره الأصلي لفترة طويلة.',
+        'overlock-thread-benefit': 'هيكله المرن يوفر استخدامًا خاليًا من المشاكل في السجاد بمختلف سماكاته، بينما يوفر أداؤه السلس في الخياطة تشطيبًا احترافيًا.',
+        
+        'warp-thread-title': 'خيط السدى (توبباشي)',
+        'warp-thread-lead': 'خيوط سدى عالية القوة أساسها القطن، تقدم حلولاً موثوقة لعمليات الإنتاج الخاصة بك.',
+        'warp-thread-desc': 'يتم تصنيع خيوط السدى القطنية لدينا بقوة شد عالية ومعايير جودة لتلبية متطلبات إنتاج النسيج الحديث.',
+        'warp-thread-benefit': 'توفر المتانة ومعايير الجودة حلولاً موثوقة لعمليات الإنتاج الخاصة بك.',
+
         // Quality Section
         'quality-title': 'معايير الجودة',
         'quality-subtitle': 'كل خيط يلبي معايير الجودة الصارمة لدينا',
