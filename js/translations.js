@@ -279,15 +279,15 @@ const translations = {
         'nav-contact': 'İletişim',
         
         // Hero Section
-        'hero-title': 'Özel Tekstil Uygulamaları için Kaliteli İplikler',
-        'hero-subtitle': 'GAZİANTEP, TÜRKİYE\'DE TEKSTİL UYGULAMALARI İÇİN PREMIUM İPLİKLERİN ÖNDE GELEN ÜRETİCİSİ VE İHRACATÇISI',
+        'hero-title': 'Özel halılar için kaliteli kumaş ve iplikler',
+        'hero-subtitle': 'GAZİANTEP, TÜRKİYE DE HALI KONFEKSİYON MALZEMELERİ KONUSUNDA ÖNDE GELEN TEDARİKÇİ VE İHRACATÇI',
         'hero-btn-products': 'Ürünleri Keşfet',
         'hero-btn-contact': 'İletişime Geç',
         'scroll-down': 'Aşağı Kaydır',
         
         // Features
         'feature-quality-title': 'Premium Kalite',
-        'feature-quality-desc': 'Son teknoloji ile üretilen ve sıkı kalite kontrolünden geçen en yüksek grade iplikler.',
+        'feature-quality-desc': 'SON TEKNOLOJİ İLE ÜRETİLEN VE SIKI KALİTE KONTROLÜNDEN GEÇEN TEDARİK VE ÜRETİM STANDARTI',
         'feature-export-title': 'Küresel İhracat',
         'feature-export-desc': 'Dünya çapında müşterilere güvenilir sevkiyat ve uluslararası kalite standartları.',
         'feature-production-title': 'Modern Üretim',
