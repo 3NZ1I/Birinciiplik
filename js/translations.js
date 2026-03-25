@@ -292,8 +292,8 @@ const translations = {
         'feature-export-desc': 'Dünya çapında müşterilere güvenilir sevkiyat ve uluslararası kalite standartları.',
         'feature-production-title': 'Modern Üretim',
         'feature-production-desc': 'Gaziantep\'in tekstil endüstrisinin kalbinde gelişmiş üretim tesisleri.',
-        'feature-partner-title': 'Güvenilir Ortak',
-        'feature-partner-desc': 'Her iplikte uzmanlık ve müşteri memnuniyetine bağlılık.',
+        'feature-partner-title': 'GÜVENİLİR ORTAK',
+        'feature-partner-desc': 'HER ÜRÜNDE UZMANLIK VE MÜŞTERİ MENNUNİYETİNE BAĞLILIK',
         
         // About Preview
         'about-facility': 'Gaziantep\'teki Tesisimiz',
