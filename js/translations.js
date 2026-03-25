@@ -25,8 +25,8 @@ const translations = {
         'feature-export-desc': 'Serving clients worldwide with reliable shipping and international quality standards.',
         'feature-production-title': 'Modern Production',
         'feature-production-desc': 'Advanced manufacturing facilities in the heart of Gaziantep\'s textile industry.',
-        'feature-partner-title': 'Trusted Partner',
-        'feature-partner-desc': 'Years of expertise and commitment to customer satisfaction in every thread.',
+        'feature-partner-title': 'A reliable partner',
+        'feature-partner-desc': 'With expertise in every product and a commitment to customer satisfaction.',
         
         // About Preview
         'about-facility': 'Our Facility in Gaziantep',
@@ -292,8 +292,8 @@ const translations = {
         'feature-export-desc': 'Dünya çapında müşterilere güvenilir sevkiyat ve uluslararası kalite standartları.',
         'feature-production-title': 'Modern Üretim',
         'feature-production-desc': 'Gaziantep\'in tekstil endüstrisinin kalbinde gelişmiş üretim tesisleri.',
-        'feature-partner-title': 'GÜVENİLİR ORTAK',
-        'feature-partner-desc': 'HER ÜRÜNDE UZMANLIK VE MÜŞTERİ MENNUNİYETİNE BAĞLILIK',
+        'feature-partner-title': 'Güvenilir ortak',
+        'feature-partner-desc': 'Her üründe uzmanlık ve müşteri memnuniyetine bağlılık',
         
         // About Preview
         'about-facility': 'Gaziantep\'teki Tesisimiz',
@@ -560,7 +560,7 @@ const translations = {
         'feature-production-title': 'إنتاج حديث',
         'feature-production-desc': 'مرافق تصنيع متقدمة في قلب صناعة النسيج في غازي عنتاب.',
         'feature-partner-title': 'شريك موثوق',
-        'feature-partner-desc': 'سنوات من الخبرة والالتزام برضا العملاء في كل خيط.',
+        'feature-partner-desc': 'يتمتع بخبرة في كل منتج والتزام برضا العملاء.',
         
         // About Preview
         'about-facility': 'مرفقنا في غازي عنتاب',
