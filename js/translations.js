@@ -13,7 +13,7 @@ const translations = {
         
         // Hero Section
         'hero-title': 'High-quality <span>fabrics and yarns</span> for custom carpets.',
-        'hero-subtitle': 'Leading manufacturer and exporter of premium threads for textile applications in Gaziantep, Turkey',
+        'hero-subtitle': 'Gaziantep, Turkey is a leading supplier and exporter of carpet and garment materials.',
         'hero-btn-products': 'Explore Products',
         'hero-btn-contact': 'Get in Touch',
         'scroll-down': 'Scroll Down',
@@ -547,7 +547,7 @@ const translations = {
         
         // Hero Section
         'hero-title': 'أقمشة وخيوط عالية الجودة <span>للسجاد المصمم حسب الطلب</span>.',
-        'hero-subtitle': 'الشركة الرائدة في تصنيع وتصدير الخيوط الممتازة لتطبيقات النسيج في غازي عنتاب، تركيا',
+        'hero-subtitle': 'تُعد غازي عنتاب، تركيا، مورداً ومصدراً رائداً للسجاد ومواد الملابس.',
         'hero-btn-products': 'استكشف المنتجات',
         'hero-btn-contact': 'تواصل معنا',
         'scroll-down': 'مرر للأسفل',
