@@ -1,321 +1,267 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Birinci İplik</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Quest', 'Kaf Aref Ruqaa', Arial, sans-serif;
-            line-height: 1.8;
-            color: #333;
-            background-color: #f9f9f9;
-        }
-
-        /* Language Styles */
-        body.lang-ar {
-            direction: rtl;
-            text-align: right;
-        }
-
-        body.lang-en,
-        body.lang-tr {
-            direction: ltr;
-            text-align: left;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: white;
-            padding: 1rem 2rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        }
-
-        .header-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #e94560;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #e94560;
-        }
-
-        .lang-switch {
-            display: flex;
-            gap: 0.5rem;
-        }
-
-        .lang-btn {
-            padding: 0.5rem 1rem;
-            border: 1px solid #e94560;
-            background: transparent;
-            color: white;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: all 0.3s;
-        }
-
-        .lang-btn:hover,
-        .lang-btn.active {
-            background: #e94560;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                        url('images/background for contact.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 40vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 60px;
-        }
-
-        .hero h1 {
-            color: white;
-            font-size: 3rem;
-            text-align: center;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        /* Content Section */
-        .content-section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        .about-text {
-            background: white;
-            padding: 3rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            line-height: 2;
-            text-align: justify;
-        }
-
-        .lang-ar .about-text p {
-            text-align: justify;
-            font-size: 1.2rem;
-        }
-
-        /* Footer */
-        footer {
-            background: #1a1a2e;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1rem;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .about-text {
-                padding: 1.5rem;
-            }
-        }
-    </style>
+    <meta name="description" content="Learn about Birinci İplik - a leading thread manufacturer in Gaziantep, Turkey with years of expertise in textile export.">
+    <title>About Us | Birinci İplik</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="preconnect" href="https://api.fontshare.com">
+    <link href="https://api.fontshare.com/v2/css?f[]=chillax@400,500,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=20260301-v2">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="logo">BİRİNCİ İPLİK</div>
-            <nav>
-                <ul>
-                    <li><a href="index.html" data-tr="Ana Sayfa" data-en="Home" data-ar="الرئيسية">Ana Sayfa</a></li>
-                    <li><a href="about.html" data-tr="Hakkımızda" data-en="About Us" data-ar="من نحن">Hakkımızda</a></li>
-                    <li><a href="products.html" data-tr="Ürünler" data-en="Products" data-ar="المنتجات">Ürünler</a></li>
-                    <li><a href="contact.html" data-tr="İletişim" data-en="Contact" data-ar="اتصل بنا">İletişim</a></li>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="Birinci İplik Logo" class="logo-image">
+                    <span class="logo-text">Birinci <strong>İplik</strong></span>
+                </a>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link" data-i18n="nav-home">Home</a></li>
+                    <li><a href="products.html" class="nav-link" data-i18n="nav-products">Products</a></li>
+                    <li><a href="about.html" class="nav-link active" data-i18n="nav-about">About Us</a></li>
+                    <li><a href="contact.html" class="nav-link" data-i18n="nav-contact">Contact</a></li>
+                    <li class="lang-switch">
+                        <button class="lang-btn active" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="tr">TR</button>
+                        <button class="lang-btn" data-lang="ar">عربي</button>
+                    </li>
+                    <li><a href="mailto:sales@birinciiplik.com?subject=Request For Price Quote&body=Hi there, can I get an updated price quote?" class="btn btn-primary quote-btn" data-i18n="nav-quote">Get a Quote</a></li>
                 </ul>
-            </nav>
-            <div class="lang-switch">
-                <button class="lang-btn active" onclick="setLanguage('tr')">TR</button>
-                <button class="lang-btn" onclick="setLanguage('en')">EN</button>
-                <button class="lang-btn" onclick="setLanguage('ar')">ع</button>
             </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header about-header">
+        <div class="container">
+            <h1 data-i18n="about-page-title">About Us</h1>
+            <p data-i18n="about-page-subtitle">Your trusted partner in premium thread manufacturing</p>
         </div>
     </header>
 
-    <section class="hero">
-        <h1 id="page-title">Hakkımızda</h1>
-    </section>
+    <!-- Main About Section -->
+    <section class="about-main">
+        <div class="container">
+            <div class="about-main-grid">
+                <div class="about-main-content">
+                    <h2 data-i18n="about-story-title">Our Story</h2>
+                    <p class="lead" data-i18n="about-story-lead">Birinci İplik has been at the forefront of Turkey's textile industry, continuing Gaziantep's rich heritage of textile excellence.</p>
+                    <p data-i18n="about-story-desc1">Located in Gaziantep, a city with thousands of years of history in textile production, Birinci İplik combines traditional craftsmanship with modern manufacturing technology. Our journey began with a simple mission: to produce the highest quality threads that meet the demanding needs of textile manufacturers worldwide.</p>
+                    <p data-i18n="about-story-desc2">Today, we export our products to over 50 countries across Europe, Asia, Africa, and the Americas, building long-lasting partnerships with fabric and carpet manufacturers who value quality, reliability, and innovation.</p>
 
-    <section class="content-section">
-        <div class="about-text" id="about-content">
-            <!-- Content will be loaded from JSON -->
+                    <h3 data-i18n="about-location-title">Our Location</h3>
+                    <p data-i18n="about-location-desc">Gaziantep is not just our home – it's the heart of Turkey's textile industry. With its strategic location, skilled workforce, and deep-rooted textile traditions, Gaziantep provides the perfect foundation for our operations. Our modern facility is equipped with state-of-the-art machinery and employs experienced professionals dedicated to quality excellence.</p>
+                </div>
+                <div class="about-main-image">
+                    <div class="image-placeholder tall">
+                        <span>🏭</span>
+                        <p data-i18n="about-facility-img">Our Manufacturing Facility</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Birinci İplik San. Tic. - <span data-lang="all-rights">Tüm Hakları Saklıdır</span></p>
+    <!-- Mission & Vision -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="mv-grid">
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <img src="images/leadership.png" alt="Our Mission" style="width: 100px; height: 100px; object-fit: contain;">
+                    </div>
+                    <h2 data-i18n="mission-title">Our Mission</h2>
+                    <p data-i18n="mission-desc">To deliver premium quality threads that exceed our customers' expectations, while maintaining sustainable practices and contributing to the growth of the global textile industry.</p>
+                </div>
+                <div class="mv-card">
+                    <div class="mv-icon">
+                        <img src="images/vision.png" alt="Our Vision" style="width: 100px; height: 100px; object-fit: contain;">
+                    </div>
+                    <h2 data-i18n="vision-title">Our Vision</h2>
+                    <p data-i18n="vision-desc">To be the preferred global partner for textile threads, recognized for our commitment to quality, innovation, and customer service excellence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <h2 class="text-center" data-i18n="values-title">Our Core Values</h2>
+            <p class="section-subtitle text-center" data-i18n="values-subtitle">The principles that guide everything we do</p>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <img src="images/quality-1.png" alt="Quality" style="width: 80px; height: 80px; object-fit: contain;">
+                    </div>
+                    <h3 data-i18n="value-quality-title">Quality</h3>
+                    <p data-i18n="value-quality-desc">We never compromise on quality. Every thread we produce meets our rigorous standards.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <img src="images/Integrity.png" alt="Integrity" style="width: 80px; height: 80px; object-fit: contain;">
+                    </div>
+                    <h3 data-i18n="value-integrity-title">Integrity</h3>
+                    <p data-i18n="value-integrity-desc">Honest and transparent relationships with customers, suppliers, and partners.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <img src="images/Innovation.png" alt="Innovation" style="width: 80px; height: 80px; object-fit: contain;">
+                    </div>
+                    <h3 data-i18n="value-innovation-title">Innovation</h3>
+                    <p data-i18n="value-innovation-desc">Continuous improvement in products, processes, and services.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <img src="images/Sustainability.png" alt="Sustainability" style="width: 80px; height: 80px; object-fit: contain;">
+                    </div>
+                    <h3 data-i18n="value-sustainability-title">Sustainability</h3>
+                    <p data-i18n="value-sustainability-desc">Commitment to environmentally responsible manufacturing practices.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <img src="images/Customer-Focus.png" alt="Customer Focus" style="width: 80px; height: 80px; object-fit: contain;">
+                    </div>
+                    <h3 data-i18n="value-customer-title">Customer Focus</h3>
+                    <p data-i18n="value-customer-desc">Understanding and exceeding customer expectations in every interaction.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <img src="images/Excellence.png" alt="Excellence" style="width: 80px; height: 80px; object-fit: contain;">
+                    </div>
+                    <h3 data-i18n="value-excellence-title">Excellence</h3>
+                    <p data-i18n="value-excellence-desc">Striving for excellence in everything we do, from production to delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="text-center" data-i18n="why-title">Why Choose Birinci İplik?</h2>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="why-number">1</div>
+                    <h3 data-i18n="why-1-title">Premium Raw Materials</h3>
+                    <p data-i18n="why-1-desc">We source only the finest raw materials from trusted suppliers, ensuring consistent quality in every batch.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-number">2</div>
+                    <h3 data-i18n="why-2-title">Advanced Technology</h3>
+                    <p data-i18n="why-2-desc">Our production facility uses cutting-edge machinery and technology for optimal efficiency and quality.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-number">3</div>
+                    <h3 data-i18n="why-3-title">Quality Control</h3>
+                    <p data-i18n="why-3-desc">Rigorous testing at every stage of production ensures our threads meet international standards.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-number">4</div>
+                    <h3 data-i18n="why-4-title">Competitive Pricing</h3>
+                    <p data-i18n="why-4-desc">Direct manufacturing allows us to offer competitive prices without compromising quality.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-number">5</div>
+                    <h3 data-i18n="why-5-title">Reliable Delivery</h3>
+                    <p data-i18n="why-5-desc">Efficient logistics and supply chain management ensure on-time delivery worldwide.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-number">6</div>
+                    <h3 data-i18n="why-6-title">Expert Support</h3>
+                    <p data-i18n="why-6-desc">Our experienced team provides technical support and consultation for all your thread needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-i18n="cta-title">Ready to Partner With Us?</h2>
+                <p data-i18n="cta-desc">Discover the Birinci İplik difference. Contact us today to discuss your requirements.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-large" data-i18n="cta-btn-contact">Contact Us</a>
+                    <a href="products.html" class="btn btn-outline btn-large" data-i18n="products-btn">View Products</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Birinci İplik</h4>
+                    <p data-i18n="footer-desc">Premium thread manufacturer and exporter based in Gaziantep, Turkey.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" class="social-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.15 5.96C15.21 5.96 16.12 6.04 16.12 6.04V8.51H15.01C13.77 8.51 13.38 9.28 13.38 10.07V12.06H16.16L15.71 14.96H13.38V21.96C18.16 21.21 21.82 17.06 21.82 12.06C21.82 6.53 17.32 2.04 12 2.04Z"/></svg>
+                        </a>
+                        <a href="#" aria-label="X" class="social-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M18.9 2H15.35L12 7.89L8.65 2H5.1L9.63 9.91L5.1 22H8.65L12 16.1L15.35 22H18.9L14.37 14.09L18.9 2M17.66 20H15.91L6.34 3.34H8.09L17.66 20Z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Telegram" class="social-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M9.78 18.65L10.06 14.42L17.74 7.5C18.08 7.19 17.67 7.04 17.22 7.31L7.74 13.3L3.64 12C2.76 11.75 2.75 11.14 3.84 10.7L19.81 4.54C20.54 4.21 21.24 4.72 20.96 5.84L18.24 18.65C18.05 19.56 17.5 19.78 16.74 19.36L12.6 16.3L10.61 18.23C10.38 18.46 10.19 18.65 9.78 18.65Z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/birinciiplik/" target="_blank" aria-label="Instagram" class="social-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer-links-title">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav-home">Home</a></li>
+                        <li><a href="products.html" data-i18n="nav-products">Products</a></li>
+                        <li><a href="about.html" data-i18n="nav-about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="nav-contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer-products-title">Products</h4>
+                    <ul>
+                        <li><a href="products.html#fabric">Fabric Threads</a></li>
+                        <li><a href="products.html#carpet">Carpet Threads</a></li>
+                        <li><a href="products.html#specialty">Specialty Threads</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer-contact-title">Contact Info</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <img src="images/location-pin.png" alt="Location" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 8px;">
+                            BİRİNCİ İPLİK SAN.TİC.<br>3. Organize San. Böl., Gaziantep
+                        </li>
+                        <li>
+                            <img src="images/mail.png" alt="Email" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 8px;">
+                            sales@birinciiplik.com
+                        </li>
+                        <li>
+                            <img src="images/telephone.png" alt="Phone" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 8px;">
+                            +90 533 627 47 61
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Birinci İplik. All rights reserved. | Made with ❤️ by <a href="https://bessar.work/" target="_blank" style="color: var(--secondary-color); text-decoration: none;">CodeB</a></p>
+            </div>
+        </div>
     </footer>
 
-    <script>
-        const content = {
-            "tr": {
-                "title": "Hakkımızda",
-                "paragraphs": [
-                    "Birinci İplik San.Tic. olarak halı sektörüne yönelik tamamlayıcı malzemelerin tedarik ve hazırlık süreçlerini titizlikle yürütüyoruz.",
-                    "Faaliyet alanlarımız arasında halı overlok şeridi, farklı denyelerde iğne ipliği (polyester iplik), topbaşı ipliği ve kolibandı bulunmaktadır.",
-                    "Halı overlok şeritlerinde kaliteli kumaşları kendi makinelerimizde, müşterilerimizin talep ettiği ölçülerde keserek kullanıma hazır hale getiriyoruz.",
-                    "İğne ipliğimiz orijinal polyester iplik olup, doğrudan yurt dışından tarafımızca temin edilmektedir. Topbaşı ipliği ise kendi imalatımızdır.",
-                    "Sade ve güvenilir çalışma anlayışımızla, müşterilerimize düzenli, zamanında ve standart kalitede hizmet sunmaya devam ediyoruz.",
-                    "Birinci İplik Sanayi ve Ticaret olarak, halı sektörüne yönelik tamamlayıcı malzemelerin tedarik ve hazırlık süreçlerinde güvenilir ve çözüm odaklı bir iş ortağı olarak faaliyet göstermekteyiz. Sektörde edindiğimiz deneyim ve kalite odaklı yaklaşımımız sayesinde, müşterilerimizin ihtiyaçlarına hızlı ve doğru çözümler sunmayı ilke ediniyoruz.",
-                    "Faaliyet alanlarımız; halı üretim ve konfeksiyon süreçlerinde önemli bir yere sahip olan halı overlok şeridi, farklı denyelerde iğne ipliği (polyester iplik), topbaşı ipliği ve kolibandı gibi temel yardımcı malzemeleri kapsamaktadır. Her bir ürün grubunda kalite, süreklilik ve kullanım kolaylığı önceliğimizdir.",
-                    "Halı overlok şeritlerinde, özenle seçilmiş kaliteli kumaşları kendi bünyemizde bulunan modern makinelerimizde işleyerek, müşterilerimizin talep ettiği ölçü ve standartlarda kesim yapıyor; ürünleri doğrudan kullanıma hazır şekilde sunuyoruz. Bu sayede üretim süreçlerinde zaman tasarrufu ve operasyonel verimlilik sağlıyoruz.",
-                    "İğne ipliği ürünlerimiz, yüksek dayanıklılığa sahip orijinal polyester ipliklerden oluşmakta olup, doğrudan yurt dışından tarafımızca temin edilmektedir. Bu yaklaşımımız sayesinde ürünlerimizde kalite standardını sürekli olarak koruyor ve müşterilerimize güvenilir bir kullanım sunuyoruz. Topbaşı ipliği ise kendi üretimimiz olup, kalite kontrol süreçlerinden geçirilerek müşterilerimize ulaştırılmaktadır.",
-                    "Sade, şeffaf ve güvenilir çalışma anlayışımız doğrultusunda; siparişten teslimata kadar tüm süreçleri titizlikle yönetiyor, müşterilerimize zamanında teslimat, istikrarlı kalite ve sürdürülebilir hizmet sunuyoruz.",
-                    "Birinci İplik olarak hedefimiz; iş ortaklarımızın üretim süreçlerine değer katmak, uzun vadeli iş birlikleri kurmak ve sektörde güvenle tercih edilen bir marka olmaya devam etmektir."
-                ]
-            },
-            "en": {
-                "title": "About Us",
-                "paragraphs": [
-                    "As Birinci İplik San.Tic., we meticulously carry out the supply and preparation processes of complementary materials for the carpet industry.",
-                    "Our areas of activity include carpet overlock tape, needle thread in different deniers (polyester thread), spool thread, and binding tape.",
-                    "For carpet overlock tapes, we cut quality fabrics on our own machines according to our customers' requested measurements, making them ready for use.",
-                    "Our needle thread is original polyester thread, sourced directly from abroad by us. The spool thread is our own production.",
-                    "With our simple and reliable working philosophy, we continue to offer our customers regular, timely, and standard quality service.",
-                    "As Birinci İplik Sanayi ve Ticaret, we operate as a reliable and solution-oriented business partner in the supply and preparation processes of complementary materials for the carpet industry. Thanks to our experience in the sector and our quality-focused approach, we have made it a principle to offer fast and accurate solutions to our customers' needs.",
-                    "Our areas of activity cover basic auxiliary materials such as carpet overlock tape, needle thread in different deniers (polyester thread), spool thread, and binding tape, which play an important role in carpet production and garment processes. Quality, continuity, and ease of use are our priorities in each product group.",
-                    "For carpet overlock tapes, we process carefully selected quality fabrics in our modern machines within our own facility, making cuts according to the measurements and standards requested by our customers, and present the products ready for direct use. This way, we provide time savings and operational efficiency in production processes.",
-                    "Our needle thread products consist of original polyester threads with high durability and are sourced directly from abroad by us. Thanks to this approach, we continuously maintain the quality standard in our products and offer reliable use to our customers. Our spool thread is our own production and is delivered to our customers after passing through quality control processes.",
-                    "In line with our simple, transparent, and reliable working philosophy, we meticulously manage all processes from order to delivery, offering our customers on-time delivery, consistent quality, and sustainable service.",
-                    "As Birinci İplik, our goal is to add value to our business partners' production processes, establish long-term partnerships, and continue to be a brand that is trusted and preferred in the sector."
-                ]
-            },
-            "ar": {
-                "title": "من نحن",
-                "paragraphs": [
-                    "في بيرينجي إيبليك سان.تيك.، نقوم بدقة بتنفيذ عمليات التوريد والتحضير للمواد التكميلية المخصصة لصناعة السجاد.",
-                    "تشمل مجالات نشاطنا شريط الأوفرلوك للسجاد، وخيط الإبرة بمقاييس دنير مختلفة (خيط بوليستر)، وخيط البكرة، وشريط الربط.",
-                    "بالنسبة لأشرطة الأوفرلوك للسجاد، نقوم بقص الأقمشة عالية الجودة على آلاتنا الخاصة وفقًا للقياسات المطلوبة من عملائنا، مما يجعلها جاهزة للاستخدام.",
-                    "خيط الإبرة الخاص بنا هو خيط بوليستر أصلي، يتم توريده مباشرة من الخارج من قبلنا. أما خيط البكرة فهو من إنتاجنا الخاص.",
-                    "من خلال فلسفتنا العملية البسيطة والموثوقة، نستمر في تقديم خدمة منتظمة وفي الوقت المناسب وبجودة قياسية لعملائنا.",
-                    "بصفتنا بيرينجي إيبليك للصناعة والتجارة، نعمل كشريك عمل موثوق وموجه نحو الحلول في عمليات التوريد والتحضير للمواد التكميلية المخصصة لصناعة السجاد. وبفضل خبرتنا في القطاع ونهجنا المرتكز على الجودة، جعلنا من مبادئنا تقديم حلول سريعة ودقيقة لاحتياجات عملائنا.",
-                    "تغطي مجالات نشاطنا المواد المساعدة الأساسية مثل شريط الأوفرلوك للسجاد، وخيط الإبرة بمقاييس دنير مختلفة (خيط بوليستر)، وخيط البكرة، وشريط الربط، والتي تلعب دورًا مهمًا في عمليات إنتاج السجاد والخياطة. إن الجودة والاستمرارية وسهولة الاستخدام هي أولوياتنا في كل مجموعة منتجات.",
-                    "بالنسبة لأشرطة الأوفرلوك للسجاد، نقوم بمعالجة الأقمشة عالية الجودة المختارة بعناية في آلاتنا الحديثة ضمن منشأتنا الخاصة، ونقوم بالقص وفقًا للقياسات والمعايير المطلوبة من عملائنا، ونقدم المنتجات جاهزة للاستخدام المباشر. وبهذه الطريقة، نوفر توفير الوقت والكفاءة التشغيلية في عمليات الإنتاج.",
-                    "تتكون منتجات خيط الإبرة الخاصة بنا من خيوط بوليستر أصلية عالية المتانة ويتم توريدها مباشرة من الخارج من قبلنا. وبفضل هذا النهج، نحافظ باستمرار على المعيار القياسي في منتجاتنا ونقدم استخدامًا موثوقًا لعملائنا. أما خيط البكرة فهو من إنتاجنا الخاص ويتم تسليمه لعملائنا بعد اجتيازه عمليات مراقبة الجودة.",
-                    "تماشيًا مع فلسفتنا العملية البسيطة والشفافة والموثوقة، ندير بدقة جميع العمليات من الطلب حتى التسليم، ونقدم لعملائنا تسليمًا في الوقت المحدد، وجودة متسقة، وخدمة مستدامة.",
-                    "كبيرينجي إيبليك، هدفنا هو إضافة قيمة لعمليات الإنتاج لشركائنا في الأعمال، وإقامة شراكات طويلة الأجل، والاستمرار في أن نكون علامة تجارية موثوقة ومفضلة في القطاع."
-                ]
-            }
-        };
-
-        const footerText = {
-            "tr": "Tüm Hakları Saklıdır",
-            "en": "All Rights Reserved",
-            "ar": "جميع الحقوق محفوظة"
-        };
-
-        let currentLang = 'tr';
-
-        function setLanguage(lang) {
-            currentLang = lang;
-            
-            // Update body class for RTL/LTR
-            document.body.className = 'lang-' + lang;
-            document.documentElement.lang = lang;
-
-            // Update buttons
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active');
-
-            // Update page title
-            document.getElementById('page-title').textContent = content[lang].title;
-
-            // Update about content
-            const aboutContent = document.getElementById('about-content');
-            aboutContent.innerHTML = '';
-            content[lang].paragraphs.forEach(paragraph => {
-                const p = document.createElement('p');
-                p.textContent = paragraph;
-                aboutContent.appendChild(p);
-            });
-
-            // Update footer
-            document.querySelector('[data-lang="all-rights"]').textContent = footerText[lang];
-
-            // Update navigation
-            document.querySelectorAll('nav a').forEach(link => {
-                link.textContent = link.getAttribute('data-' + lang);
-            });
-
-            // Save preference
-            localStorage.setItem('preferredLang', lang);
-        }
-
-        // Load saved language preference or default to Turkish
-        document.addEventListener('DOMContentLoaded', function() {
-            const savedLang = localStorage.getItem('preferredLang') || 'tr';
-            
-            // Set active button state
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.textContent.toLowerCase() === savedLang || 
-                    (savedLang === 'ar' && btn.textContent === 'ع')) {
-                    btn.classList.add('active');
-                }
-            });
-
-            setLanguage(savedLang);
-        });
-    </script>
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
