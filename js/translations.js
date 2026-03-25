@@ -85,7 +85,7 @@ const translations = {
         'cta-btn-call': 'Call Now',
         
         // Footer
-        'footer-desc': 'Premium thread manufacturer and exporter based in Gaziantep, Turkey.',
+        'footer-desc': 'Premium thread best exporter and partner based in Gaziantep, Turkey.',
         'footer-links-title': 'Quick Links',
         'footer-products-title': 'Products',
         'footer-contact-title': 'Contact Info',
@@ -352,7 +352,7 @@ const translations = {
         'cta-btn-call': 'Şimdi Ara',
         
         // Footer
-        'footer-desc': 'Gaziantep, Türkiye merkezli premium iplik üreticisi ve ihracatçısı.',
+        'footer-desc': 'Gaziantep, Türkiye merkezli premium iplik en iyi ihracatçısı ve iş ortağınız.',
         'footer-links-title': 'Hızlı Linkler',
         'footer-products-title': 'Ürünler',
         'footer-contact-title': 'İletişim Bilgileri',
@@ -619,7 +619,7 @@ const translations = {
         'cta-btn-call': 'اتصل الآن',
         
         // Footer
-        'footer-desc': 'شركة تصنيع وتصدير خيوط ممتازة مقرها غازي عنتاب، تركيا.',
+        'footer-desc': 'أفضل شركة تصدير خيوط ممتازة وشريكك الموثوق مقرها غازي عنتاب، تركيا.',
         'footer-links-title': 'روابط سريعة',
         'footer-products-title': 'المنتجات',
         'footer-contact-title': 'معلومات الاتصال',
