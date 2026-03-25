@@ -12,7 +12,7 @@ const translations = {
         'nav-contact': 'Contact',
         
         // Hero Section
-        'hero-title': 'Quality Threads for <br><span>Exceptional Textiles</span>',
+        'hero-title': 'Quality Threads for <br><span>Exceptional Carpets</span>',
         'hero-subtitle': 'Leading manufacturer and exporter of premium threads for textile applications in Gaziantep, Turkey',
         'hero-btn-products': 'Explore Products',
         'hero-btn-contact': 'Get in Touch',
@@ -279,7 +279,7 @@ const translations = {
         'nav-contact': 'İletişim',
         
         // Hero Section
-        'hero-title': 'Özel halılar için kaliteli kumaş ve iplikler',
+        'hero-title': 'Özel halılar için kaliteli <span>kumaş ve iplikler</span>',
         'hero-subtitle': 'GAZİANTEP, TÜRKİYE DE HALI KONFEKSİYON MALZEMELERİ KONUSUNDA ÖNDE GELEN TEDARİKÇİ VE İHRACATÇI',
         'hero-btn-products': 'Ürünleri Keşfet',
         'hero-btn-contact': 'İletişime Geç',
@@ -546,7 +546,7 @@ const translations = {
         'nav-contact': 'اتصل بنا',
         
         // Hero Section
-        'hero-title': 'خيوط عالية الجودة لـ <br><span>منسوجات استثنائية</span>',
+        'hero-title': 'خيوط عالية الجودة لـ <br><span>السجاد الاستثنائي</span>',
         'hero-subtitle': 'الشركة الرائدة في تصنيع وتصدير الخيوط الممتازة لتطبيقات النسيج في غازي عنتاب، تركيا',
         'hero-btn-products': 'استكشف المنتجات',
         'hero-btn-contact': 'تواصل معنا',
