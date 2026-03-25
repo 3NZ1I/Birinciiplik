@@ -263,8 +263,8 @@ const translations = {
         'nav-contact': 'İletişim',
         
         // Hero Section
-        'hero-title': 'Özel Tekstiller için <br><span>Kaliteli İplikler</span>',
-        'hero-subtitle': 'Gaziantep, Türkiye\'de kumaş ve halı iplikleri konusunda önde gelen üretici ve ihracatçı',
+        'hero-title': 'Özel Halılar için kaliteli kumaş ve iplikler',
+        'hero-subtitle': 'GAZİANTEP, TÜRKİYE DE HALI KONFEKSİYON MALZEMELERİ KONUSUNDA ÖNDE GELEN TEDARİKCİ VE İHRACATCI',
         'hero-btn-products': 'Ürünleri Keşfet',
         'hero-btn-contact': 'İletişime Geç',
         'scroll-down': 'Aşağı Kaydır',
