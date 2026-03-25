@@ -20,7 +20,7 @@ const translations = {
         
         // Features
         'feature-quality-title': 'Premium Quality',
-        'feature-quality-desc': 'Highest grade threads manufactured with state-of-the-art technology and strict quality control.',
+        'feature-quality-desc': 'Supply and production standards manufactured with state-of-the-art technology and subjected to strict quality control.',
         'feature-export-title': 'Global Export',
         'feature-export-desc': 'Serving clients worldwide with reliable shipping and international quality standards.',
         'feature-production-title': 'Modern Production',
@@ -287,7 +287,7 @@ const translations = {
         
         // Features
         'feature-quality-title': 'Premium Kalite',
-        'feature-quality-desc': 'SON TEKNOLOJİ İLE ÜRETİLEN VE SIKI KALİTE KONTROLÜNDEN GEÇEN TEDARİK VE ÜRETİM STANDARTI',
+        'feature-quality-desc': 'Son teknoloji ile üretilen ve sıkı kalite kontrolünden geçen tedarik ve üretim standartı',
         'feature-export-title': 'Küresel İhracat',
         'feature-export-desc': 'Dünya çapında müşterilere güvenilir sevkiyat ve uluslararası kalite standartları.',
         'feature-production-title': 'Modern Üretim',
@@ -554,7 +554,7 @@ const translations = {
         
         // Features
         'feature-quality-title': 'جودة ممتازة',
-        'feature-quality-desc': 'خيوط من أعلى درجة مصنعة بأحدث تكنولوجيا ومراقبة جودة صارمة.',
+        'feature-quality-desc': 'معايير التوريد والإنتاج: يتم تصنيعها باستخدام أحدث التقنيات وتخضع لرقابة صارمة على الجودة.',
         'feature-export-title': 'تصدير عالمي',
         'feature-export-desc': 'نخدم العملاء في جميع أنحاء العالم مع شحن موثوق ومعايير جودة دولية.',
         'feature-production-title': 'إنتاج حديث',
