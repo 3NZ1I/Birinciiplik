@@ -280,7 +280,7 @@ const translations = {
         
         // Hero Section
         'hero-title': 'Özel Tekstil Uygulamaları için Kaliteli İplikler',
-        'hero-subtitle': 'GAZİANTEP, TÜRKİYE'DE TEKSTİL UYGULAMALARI İÇİN PREMIUM İPLİKLERİN ÖNDE GELEN ÜRETİCİSİ VE İHRACATÇISI',
+        'hero-subtitle': 'GAZİANTEP, TÜRKİYE\'DE TEKSTİL UYGULAMALARI İÇİN PREMIUM İPLİKLERİN ÖNDE GELEN ÜRETİCİSİ VE İHRACATÇISI',
         'hero-btn-products': 'Ürünleri Keşfet',
         'hero-btn-contact': 'İletişime Geç',
         'scroll-down': 'Aşağı Kaydır',
